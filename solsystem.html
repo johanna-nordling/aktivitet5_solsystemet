@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solsystemet</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{
+  background: radial-gradient(circle at center,#111 0%,#000 80%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:100vh;
+}
+.solar-img{
+  width:90%;
+  max-width:1200px;
+  margin-top:40px;
+}
+.back-btn{
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<img id="solar-img" class="solar-img" src="images/solsystemet.jpg">
+
+<button class="sub-btn back-btn">Föregående sida</button>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const planet = params.get("planet");
+const img = params.get("img");
+
+if(img){
+  document.getElementById("solar-img").src = decodeURIComponent(img);
+}
+
+document.querySelector(".back-btn").addEventListener("click", () => {
+  window.location.href = `index.html?planet=${planet}`;
+});
+</script>
+
+</body>
+</html>

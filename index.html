@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upptäck Planeterna</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="cosmos">
+  <h1 class="planet-title">UPPTÄCK PLANETERNA</h1>
+  <h2 class="planet-subtitle">i vårt solsystem</h2>
+
+  <section aria-labelledby="planet-heading">
+    <h2 id="planet-heading" class="sr-only">Navigera mellan planeter</h2>
+
+    <ul id="planetTrack" role="listbox" aria-label="Planeter">
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/merkur.jpeg" data-name="Merkurius" data-solar-img="images/solsystem_merkur.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/venus.jpeg" data-name="Venus" data-solar-img="images/solsystem_venus.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="true" class="active" data-img="images/jorden.jpeg" data-name="Jorden" data-solar-img="images/solsystem_jorden.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/mars.jpeg" data-name="Mars" data-solar-img="images/solsystem_mars.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/jupiter.jpeg" data-name="Jupiter" data-solar-img="images/solsystem_jupiter.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/saturnus1.jpeg" data-name="Saturnus" data-solar-img="images/solsystem_saturnus.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/uranus.jpeg" data-name="Uranus" data-solar-img="images/solsystem_uranus.jpeg"></li>
+      <li role="option" tabindex="0" aria-selected="false" data-img="images/neptunus.jpeg" data-name="Neptunus" data-solar-img="images/solsystem_neptunus.jpeg"></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Johanna Nordling</p>
+</footer>
+
+<div class="solar-container" id="solarContainer">
+  <img id="solarImg" src="" alt="Solsystemets position">
+  <button class="back-btn" id="backBtn">Föregående sida</button>
+</div>
+
+<script src="planet.js"></script>
+</body>
+</html>
