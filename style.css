@@ -142,7 +142,7 @@ width:110px;
 height:110px;
 border-radius:50%;
 cursor:pointer;
-transition:transform .6s, box-shadow .5s;
+transition:transform .5s, box-shadow .5s;
 }
 
 .fade-in{
@@ -157,7 +157,7 @@ box-shadow:0 0 30px white;
 .planet-btn.zoom{
 transform:scale(20);
 opacity:0;
-transition:transform 10s, opacity .8s;
+transition:transform 5s, opacity .8s;
 }
 
 /* SOLSYSTEM - olika storlekar planeter */
@@ -518,7 +518,7 @@ font-size:24px;
 }
 
 .solar-title{
-font-size:40px;
+font-size:33px;
 top:80px;
 padding:15px 25px;
 }
@@ -531,13 +531,13 @@ gap:25px;
 
 /* minska stora planeter */
 .jupiter{
-width:220px;
-height:220px;
+width:200px;
+height:200px;
 }
 
 .saturnus{
-width:200px;
-height:200px;
+width:180px;
+height:180px;
 }
 
 /* planetfakta */
@@ -555,9 +555,10 @@ height:700px;
 gap:80px;
 }
 
+/* Till startsidan-knapp */
 .back-btn{
-left:50px;
-top:20%;
+left:80px; /*50*/
+top:25%; /*20*/
 }
 
 }
@@ -590,8 +591,8 @@ left:50%;
 }
 
 .solar-title{
-font-size:28px;
-top:40px;
+font-size:20px; /* 28 */
+top:50px; /*40*/
 padding:10px 18px;
 }
 
@@ -653,9 +654,9 @@ max-width:200px;
 font-size:0.65em;
 }
 
-/* tillbaka knapp */
+/* Tillbaka knapp */
 .back-btn{
-left:20px;
+left:10px; /*20*/
 top:15%;
 }
 
