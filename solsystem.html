@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solsystemets Planeter</title>
+
+<title>Solsystemets planeter</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Audiowide&display=swap" rel="stylesheet">
+
 </head>
 
-<body class="fade-in solar-page solar-bg">
 
-<!-- Tillbaka-knapp -->
-<a href="index.html" class="back-btn">&#8592;<span class="back-tooltip">Till startsidan</span></a>
+<body class="solar-page fade-in solar-bg">
+
+<!-- Tillbaka-knapp med tooltip -->
+<button id="backBtn" class="back-btn">
+  &#8592;
+  <span class="back-tooltip">Till startsidan</span>
+</button>
 
 <h1 class="solar-title">SOLSYSTEMETS PLANETER</h1>
 
 <div class="planet-row">
-  <a href="planetfakta.html?planet=Merkurius" class="planet-btn-link">
-    <img src="images/merkur.jpeg" class="planet-btn merkur" data-planet="Merkurius">
-  </a>
-  <a href="planetfakta.html?planet=Venus" class="planet-btn-link">
-    <img src="images/venus.jpeg" class="planet-btn venus" data-planet="Venus">
-  </a>
-  <a href="planetfakta.html?planet=Jorden" class="planet-btn-link">
-    <img src="images/jorden.jpeg" class="planet-btn jorden" data-planet="Jorden">
-  </a>
-  <a href="planetfakta.html?planet=Mars" class="planet-btn-link">
-    <img src="images/mars.jpeg" class="planet-btn mars" data-planet="Mars">
-  </a>
-  <a href="planetfakta.html?planet=Jupiter" class="planet-btn-link">
-    <img src="images/jupiter.jpeg" class="planet-btn jupiter" data-planet="Jupiter">
-  </a>
-  <a href="planetfakta.html?planet=Saturnus" class="planet-btn-link">
-    <img src="images/saturnus.jpeg" class="planet-btn saturnus" data-planet="Saturnus">
-  </a>
-  <a href="planetfakta.html?planet=Uranus" class="planet-btn-link">
-    <img src="images/uranus.jpeg" class="planet-btn uranus" data-planet="Uranus">
-  </a>
-  <a href="planetfakta.html?planet=Neptunus" class="planet-btn-link">
-    <img src="images/neptunus.jpeg" class="planet-btn neptunus" data-planet="Neptunus">
-  </a>
+
+<img src="images/merkur.jpeg" class="planet-btn merkur" data-planet="Merkurius">
+
+<img src="images/venus.jpeg" class="planet-btn venus" data-planet="Venus">
+
+<img src="images/jorden.jpeg" class="planet-btn jorden" data-planet="Jorden">
+
+<img src="images/mars.jpeg" class="planet-btn mars" data-planet="Mars">
+
+<img src="images/jupiter.jpeg" class="planet-btn jupiter" data-planet="Jupiter">
+
+<img src="images/saturnus.jpeg" class="planet-btn saturnus" data-planet="Saturnus">
+
+<img src="images/uranus.jpeg" class="planet-btn uranus" data-planet="Uranus">
+
+<img src="images/neptunus.jpeg" class="planet-btn neptunus" data-planet="Neptunus">
+
+
 </div>
 
 <footer class="site2-footer">
@@ -47,5 +51,6 @@
 </footer>
 
 <script src="solsystem.js"></script>
+
 </body>
 </html>

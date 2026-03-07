@@ -497,150 +497,230 @@ body.swipe-right {
   color: rgba(212, 212, 212, 0.7);
 }
 
-/* -------------------- */
-/* MEDIA QUERIES FÖR MOBIL & TABLET */
-/* -------------------- */
 
-/* Tablets (landskap & porträtt) */
-@media (max-width: 1024px) {
-  .planet-title {
-    font-size: 48px;
-    margin-top: 100px;
-  }
-  .planet-subtitle {
-    font-size: 24px;
-    margin-top: 15px;
-  }
-  .start-image-container {
-    margin: 60px auto;
-  }
-  .enter-btn {
-    top: 50%;
-    left: 60%;
-    font-size: 18px;
-    padding: 12px;
-  }
-  .solar-title {
-    font-size: 48px;
-    top: 80px;
-    padding: 15px 30px;
-  }
-  .planet-row {
-    margin-top: 300px;
-    margin-left: 100px;
-    gap: 25px;
-  }
-  .planet-btn.jupiter,
-  .planet-btn.saturnus {
-    width: 250px;
-    height: 250px;
-  }
-  .back-btn {
-    top: 20%;
-    left: 50px;
-    font-size: 2rem;
-  }
-  #planetTrack li {
-    width: 500px;
-    height: 500px;
-  }
-  #planetTrack li[data-name="Saturnus"] {
-    width: 750px;
-    height: 750px;
-  }
+/* -------------------- */
+/* TABLET */
+/* -------------------- */
+@media (max-width: 1024px){
+
+.facts-title{
+font-size:20px;
+margin-top:120px;
 }
 
-/* Mobiler */
-@media (max-width: 768px) {
-  .planet-title {
-    font-size: 36px;
-    margin-top: 60px;
-  }
-  .planet-subtitle {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  .enter-btn {
-    top: 50%;
-    left: 55%;
-    font-size: 16px;
-    padding: 10px;
-  }
-  .solar-title {
-    font-size: 36px;
-    top: 60px;
-    padding: 10px 20px;
-  }
-  .planet-row {
-    margin-top: 200px;
-    margin-left: 20px;
-    gap: 15px;
-  }
-  .planet-btn.jupiter,
-  .planet-btn.saturnus {
-    width: 200px;
-    height: 200px;
-  }
-  .back-btn {
-    top: 15%;
-    left: 20px;
-    font-size: 1.8rem;
-  }
-  #planetTrack li {
-    width: 350px;
-    height: 350px;
-  }
-  #planetTrack li[data-name="Saturnus"] {
-    width: 500px;
-    height: 500px;
-  }
-  .facts-title {
-    font-size: 18px;
-    margin-top: 100px;
-  }
+.planet-title{
+font-size:45px;
+margin-top:80px;
 }
 
-/* Små mobiler (under 480px) */
-@media (max-width: 480px) {
-  .planet-title {
-    font-size: 28px;
-    margin-top: 40px;
-  }
-  .planet-subtitle {
-    font-size: 16px;
-    margin-top: 8px;
-  }
-  .enter-btn {
-    top: 50%;
-    left: 50%;
-    font-size: 14px;
-    padding: 8px;
-  }
-  .solar-title {
-    font-size: 28px;
-    top: 40px;
-    padding: 8px 15px;
-  }
-  .planet-row {
-    margin-top: 150px;
-    margin-left: 10px;
-    gap: 10px;
-  }
-  .planet-btn.jupiter,
-  .planet-btn.saturnus {
-    width: 150px;
-    height: 150px;
-  }
-  #planetTrack li {
-    width: 250px;
-    height: 250px;
-  }
-  #planetTrack li[data-name="Saturnus"] {
-    width: 400px;
-    height: 400px;
-  }
-  .facts-title {
-    font-size: 16px;
-    margin-top: 60px;
-  }
+.planet-subtitle{
+font-size:24px;
+}
+
+.solar-title{
+font-size:40px;
+top:80px;
+padding:15px 25px;
+}
+
+.planet-row{
+margin-top:350px;
+margin-left:0;
+gap:25px;
+}
+
+/* minska stora planeter */
+.jupiter{
+width:220px;
+height:220px;
+}
+
+.saturnus{
+width:200px;
+height:200px;
+}
+
+/* planetfakta */
+#planetTrack li{
+width:500px;
+height:500px;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:700px;
+height:700px;
+}
+
+.sub-btns-container{
+gap:80px;
+}
+
+.back-btn{
+left:50px;
+top:20%;
+}
+
+}
+
+
+/* -------------------- */
+/* MOBIL */
+/* -------------------- */
+@media (max-width:768px){
+
+.facts-title{
+font-size:16px;
+margin-top:80px;
+padding:0 20px;
+}
+
+.planet-title{
+font-size:32px;
+margin-top:60px;
+}
+
+.planet-subtitle{
+font-size:18px;
+}
+
+.enter-btn{
+font-size:16px;
+padding:12px;
+left:50%;
+}
+
+.solar-title{
+font-size:28px;
+top:40px;
+padding:10px 18px;
+}
+
+.planet-row{
+margin-top:250px;
+gap:18px;
+}
+
+/* planetstorlekar */
+.jupiter{
+width:140px;
+height:140px;
+}
+
+.saturnus{
+width:150px;
+height:150px;
+}
+
+.uranus{
+width:60px;
+height:60px;
+}
+
+.neptunus{
+width:60px;
+height:60px;
+}
+
+/* planetfakta */
+#planetTrack li{
+width:70vw;
+height:70vw;
+top:45%;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:85vw;
+height:85vw;
+}
+
+/* mittknapp */
+.planet-main-btn{
+font-size:26px;
+}
+
+/* subknappar */
+.sub-btns-container{
+gap:45px;
+}
+
+.sub-btn{
+font-size:0.9em;
+}
+
+/* popup */
+.popup{
+max-width:200px;
+font-size:0.65em;
+}
+
+/* tillbaka knapp */
+.back-btn{
+left:20px;
+top:15%;
+}
+
+}
+
+
+/* -------------------- */
+/* LITEN MOBIL */
+/* -------------------- */
+@media (max-width:480px){
+
+.facts-title{
+font-size:14px;
+margin-top:60px;
+}
+
+.planet-title{
+font-size:26px;
+}
+
+.solar-title{
+font-size:22px;
+}
+
+.planet-row{
+margin-top:200px;
+gap:12px;
+}
+
+/* ännu mindre planeter */
+.jupiter{
+width:100px;
+height:100px;
+}
+
+.saturnus{
+width:110px;
+height:110px;
+}
+
+/* subknappar närmare mitten */
+.sub-btns-container{
+gap:30px;
+}
+
+.planet-main-btn{
+font-size:20px;
+}
+
+.sub-btn{
+font-size:0.8em;
+padding:0.2em 0.4em;
+}
+
+/* popup ännu mindre */
+.popup{
+max-width:160px;
+font-size:0.6em;
+}
+
+/* tillbaka knapp */
+.back-btn{
+width:35px;
+height:35px;
+font-size:2rem;
+}
+
 }
