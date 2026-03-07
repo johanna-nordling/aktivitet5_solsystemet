@@ -1,11 +1,11 @@
 const btn = document.getElementById("enterBtn");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
   btn.classList.add("zoom");
   document.body.classList.add("fade-out");
 
   setTimeout(() => {
-    // Relativ länk till solsystem.html
-    window.location.href = "./solsystem.html";
-  }, 800);
+    window.location.href = btn.href;
+  }, 800); // matchar fade-out
 });
