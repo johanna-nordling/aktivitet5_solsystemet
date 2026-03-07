@@ -623,6 +623,13 @@ height:60px;
 }
 
 /* planetfakta */
+#planetTrack{
+height:60vh;
+margin-top:20px;
+min-height:120vh;
+}
+
+
 #planetTrack li{
 width:70vw;
 height:70vw;
