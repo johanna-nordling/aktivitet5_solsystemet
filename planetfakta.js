@@ -108,12 +108,9 @@ mainBtn.addEventListener("click", () => {
   }
 });
 
-/* --- Knappen under planeten --- */
-const posBtn = document.createElement("button");
-posBtn.className = "planet-position-btn";
-posBtn.textContent = "Tillbaka till planeterna";
-
-// Relativ länk till solsystem.html
-posBtn.onclick = () => window.location.href = "./solsystem.html";
-
-activePlanet.appendChild(posBtn);
+/* --- Knappen under planeten som länk --- */
+const posLink = document.createElement("a");
+posLink.className = "planet-position-btn";
+posLink.textContent = "Tillbaka till planeterna";
+posLink.href = "./solsystem.html";  // Relativ länk till solsystem.html
+activePlanet.appendChild(posLink);
