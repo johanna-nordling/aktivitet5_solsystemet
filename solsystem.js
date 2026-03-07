@@ -19,6 +19,6 @@ const backBtn = document.getElementById("backBtn");
 backBtn.addEventListener("click", () => {
   document.body.classList.add("fade-out"); // fade-out innan navigering
   setTimeout(() => {
-    window.location.href = "./index.html";
+    window.location.href = "https://username.github.io/aktivitet5_solsystemet/planetfakta.html";
   }, 800);
 });
