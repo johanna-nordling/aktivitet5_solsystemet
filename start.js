@@ -9,8 +9,7 @@ document.body.classList.add("fade-out");
 
 setTimeout(()=>{
 
-window.location.href="solsystem.html";
-window.location.href = "https://username.github.io/aktivitet5_solsystemet/solsystem.html";
+window.location.href="./solsystem.html";
 
 },800);
 

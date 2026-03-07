@@ -9,8 +9,7 @@ planets.forEach(planet => {
     const name = planet.dataset.planet;
 
     setTimeout(() => {
-      window.location.href = `planetfakta.html?planet=${name}`;
-      window.location.href = "https://username.github.io/aktivitet5_solsystemet/lpanetfakta.html";
+      window.location.href = `./planetfakta.html?planet=${name}`;
     }, 800); // matchar övergångens längd
   });
 });
@@ -20,7 +19,6 @@ const backBtn = document.getElementById("backBtn");
 backBtn.addEventListener("click", () => {
   document.body.classList.add("fade-out"); // fade-out innan navigering
   setTimeout(() => {
-    window.location.href = "index.html";
-    window.location.href = "https://username.github.io/aktivitet5_solsystemet/index.html";
+    window.location.href = "./index.html";
   }, 800);
 });
