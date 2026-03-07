@@ -1,6 +1,6 @@
-
 const planets = document.querySelectorAll(".planet-btn");
 
+// Klick på planet → zoom + planetfakta.html
 planets.forEach(planet => {
   planet.addEventListener("click", () => {
     planet.classList.add("zoom"); // Zoom-effekt på planeten
@@ -9,18 +9,17 @@ planets.forEach(planet => {
     const name = planet.dataset.planet;
 
     setTimeout(() => {
-      
-      window.location.href = `https://username.github.io/aktivitet5_solsystemet/planetfakta.html?planet=${name}`;
-    }, 800); // matchar övergångens längd
+      // Relativ länk med query-param
+      window.location.href = `./planetfakta.html?planet=${name}`;
+    }, 800);
   });
 });
 
-// Tillbaka-knapp funktion
+// Tillbaka-knapp funktion → index.html
 const backBtn = document.getElementById("backBtn");
 backBtn.addEventListener("click", () => {
   document.body.classList.add("fade-out"); // fade-out innan navigering
   setTimeout(() => {
-    
-    window.location.href = `https://username.github.io/aktivitet5_solsystemet/index.html`;
+    window.location.href = "./index.html"; // Relativ länk
   }, 800);
 });

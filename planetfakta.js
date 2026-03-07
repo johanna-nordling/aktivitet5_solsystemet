@@ -6,7 +6,7 @@ planets.forEach(planet => {
   planet.style.backgroundImage = `url(${planet.dataset.img})`;
 });
 
-// Fakta per planet
+// Fakta per planet (oförändrat)
 const planetFacts = {
   "Merkurius": { 
     "Temperatur": "Extrema temperaturer mellan -170°C och 430°C", 
@@ -84,12 +84,10 @@ container.className = "sub-btns-container";
   popup.className = "popup";
   if(title === "Miljö" || title === "Övrig fakta") popup.classList.add("popup-bottom");
   
-  // Hämta unik fakta för planeten
   popup.textContent = planetFacts[activePlanet.dataset.name][title] || "Ingen fakta tillgänglig";
 
   subBtn.appendChild(popup);
 
-  // Visa popup på hover
   subBtn.addEventListener("mouseenter", () => popup.style.display = "block");
   subBtn.addEventListener("mouseleave", () => popup.style.display = "none");
 
@@ -100,7 +98,6 @@ activePlanet.appendChild(container);
 
 /* Visa/dölj subknappar när man klickar på mittknappen */
 let isOpen = false;
-
 mainBtn.addEventListener("click", () => {
   if (isOpen) {
     container.classList.remove("visible");
@@ -115,5 +112,8 @@ mainBtn.addEventListener("click", () => {
 const posBtn = document.createElement("button");
 posBtn.className = "planet-position-btn";
 posBtn.textContent = "Tillbaka till planeterna";
-posBtn.onclick = () => window.location.href = `https://username.github.io/aktivitet5_solsystemet/solsystem.html`;
+
+// Relativ länk till solsystem.html
+posBtn.onclick = () => window.location.href = "./solsystem.html";
+
 activePlanet.appendChild(posBtn);
