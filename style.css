@@ -683,8 +683,12 @@ margin-top:60px;
 font-size:26px;
 }
 
+.solar-page{
+  min-height:85vh; /* gör sidan längre än skärmen */
+}
+
 .solar-title{
-font-size:22px;
+font-size:17px;
 }
 
 .planet-row{
