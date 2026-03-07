@@ -115,5 +115,5 @@ mainBtn.addEventListener("click", () => {
 const posBtn = document.createElement("button");
 posBtn.className = "planet-position-btn";
 posBtn.textContent = "Tillbaka till planeterna";
-posBtn.onclick = () => window.location.href = "solsystem.html";
+posBtn.onclick = () => window.location.href = "./solsystem.html";
 activePlanet.appendChild(posBtn);
