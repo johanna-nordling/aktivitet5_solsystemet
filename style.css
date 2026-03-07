@@ -595,7 +595,7 @@ min-height:65vh; /* gör sidan längre än skärmen */
 }
 
 .solar-title{
-font-size:15px; /* 28 */
+font-size:17px; /* 28 */
 top:50px; /*40*/
 padding:10px 18px;
 }
@@ -666,7 +666,7 @@ font-size:0.65em;
 
 /* Tillbaka knapp */
 .back-btn{
-left:10px; /*20*/
+left:5px; /*20*/
 top:15%;
 }
 
@@ -698,6 +698,7 @@ font-size:15px;
 .planet-row{
 margin-top:200px;
 gap:12px;
+left:30px;
 }
 
 /* ännu mindre planeter */
@@ -736,6 +737,7 @@ font-size:0.6em;
 width:35px;
 height:35px;
 font-size:2rem;
+left:20px;
 }
 
 }
