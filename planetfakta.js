@@ -99,11 +99,21 @@ container.className = "sub-btns-container";
 activePlanet.appendChild(container);
 
 /* Visa/dölj subknappar när man klickar på mittknappen */
-mainBtn.addEventListener("click", () => container.classList.toggle("visible"));
+let isOpen = false;
+
+mainBtn.addEventListener("click", () => {
+  if (isOpen) {
+    container.classList.remove("visible");
+    isOpen = false;
+  } else {
+    container.classList.add("visible");
+    isOpen = true;
+  }
+});
 
 /* --- Knappen under planeten --- */
 const posBtn = document.createElement("button");
 posBtn.className = "planet-position-btn";
-posBtn.textContent = "Gå tillbaka till planeterna";
+posBtn.textContent = "Tillbaka till planeterna";
 posBtn.onclick = () => window.location.href = "solsystem.html";
 activePlanet.appendChild(posBtn);

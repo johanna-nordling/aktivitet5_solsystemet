@@ -1,9 +1,36 @@
+
 body{
 margin:0;
 background:black;
 color:rgb(112, 144, 171);
 font-family:sans-serif;
 overflow-x:hidden;
+
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+body.fade-out{
+opacity:0;
+transition:opacity .8s;
+}
+
+body.fade-in{
+opacity:0;
+animation:fadeInPage 1s forwards;
+}
+
+@keyframes fadeInPage{
+to{opacity:1;}
+}
+
+.facts-title{
+font-family:'Quicksand';
+text-align:center;
+font-size:23px;
+margin-top:200px;
+color:rgba(255,255,255,0.7);
 }
 
 /* rubriker */
@@ -19,7 +46,7 @@ margin-bottom:20px;
 .planet-subtitle{
 font-family:'Quicksand';
 text-align:center;
-font-size:25px;
+font-size:30px;
 margin-top:20px;
 color:rgba(255,255,255,0.7);
 }
@@ -45,7 +72,7 @@ left:70%;
 transform:translate(-50%,-50%);
 font-family:'Audiowide';
 font-size:20px;
-padding:20px;
+padding:14px;
 background:rgba(255,255,255,0.2);
 border:1px solid white;
 border-radius:30px;
@@ -61,9 +88,9 @@ background-color: rgba(222, 222, 222, 0.6);
 }
 
 .enter-btn.zoom{
-transform:translate(-50%,-50%) scale(25);
+transform:translate(-50%,-50%) scale(10);
 opacity:0;
-transition:transform 1s, opacity .8s;
+transition:transform 10s, opacity .8s;
 }
 
 body.fade-out{
@@ -83,7 +110,7 @@ transition:opacity .8s;
 
 /* gör sidan längre */
 .solar-page{
-  min-height:70vh; /* gör sidan längre än skärmen */
+  min-height:85vh; /* gör sidan längre än skärmen */
 }
 
 /* RUBRIK-BOX */
@@ -93,7 +120,7 @@ top:120px;
 right:0;
 font-family:'Audiowide', sans-serif;
 font-size:60px;
-color:white;
+color:rgb(232, 232, 232);
 padding:20px 40px;
 background:rgba(179, 179, 179, 0.3);
 backdrop-filter:blur(6px);
@@ -115,7 +142,7 @@ width:110px;
 height:110px;
 border-radius:50%;
 cursor:pointer;
-transition:transform .4s, box-shadow .4s;
+transition:transform .6s, box-shadow .5s;
 }
 
 .fade-in{
@@ -130,42 +157,58 @@ box-shadow:0 0 30px white;
 .planet-btn.zoom{
 transform:scale(20);
 opacity:0;
-transition:transform 1s, opacity .8s;
-}
-
-.fade-in{
-animation:fadeIn 1s;
+transition:transform 10s, opacity .8s;
 }
 
 /* SOLSYSTEM - olika storlekar planeter */
 .merkur{
-width:20px;
-height:20px;
+width:19px;
+height:19px;
+}
+
+.merkur:hover{
+transform:scale(2.5); /* större än de andra */
+box-shadow:0 0 30px white;
 }
 
 .venus{
-width:45px;
-height:45px;
+width:44px;
+height:44px;
 }
 
 .jorden{
-width:50px;
-height:50px;
+width:48px;
+height:48px;
 }
 
 .mars{
-width:30px;
-height:30px;
+width:25px;
+height:25px;
+}
+
+.mars:hover{
+transform:scale(2); /* större än de andra */
+box-shadow:0 0 30px white;
 }
 
 .jupiter{
-width:260px;
-height:260px;
+width:350px;
+height:350px;
+}
+
+.jupiter:hover{
+transform:scale(1.1); /* större än de andra */
+box-shadow:0 0 30px white;
 }
 
 .saturnus{
 width:320px;
 height:320px;
+}
+
+.saturnus:hover{
+transform:scale(1.1); /* större än de andra */
+box-shadow:0 0 30px white;
 }
 
 .uranus{
@@ -190,12 +233,12 @@ to{opacity:1}
 position:relative;
 height:60vh;
 margin-top:20px;
-min-height:120vh;
+min-height:140vh;
 }
 
 #planetTrack li{
 position:absolute;
-top:50%;
+top:40%;
 left:50%;
 width:750px;
 height:750px;
@@ -217,7 +260,7 @@ border-radius:50%;
 
 
 /* -------------------- */
-/* PLANETFACKTA DESIGN */
+/* PLANETFAKTA DESIGN */
 /* -------------------- */
 
 /* Mittknappen på planeten */
@@ -232,10 +275,10 @@ border-radius:50%;
   padding: 0.3em 1em;
   cursor: pointer;
   font-size: 40px;
-  z-index: 101;
+  z-index: 300;
   border: none;
   border-radius: 35px;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 .planet-main-btn:hover {
@@ -243,9 +286,9 @@ border-radius:50%;
 }
 
 .planet-main-btn:active {
-  background: rgba(172,172,172,0.3);
+  background: transparent;
   border-radius: 35px;
-  transform: translate(-50%, -50%) scale(0.98); /* nedtryckt effekt */
+  transition: all 0.5s ease;
   color: black;
 }
 
@@ -262,7 +305,7 @@ border-radius:50%;
   padding-top: 40px;
   margin-top: -7px;
   visibility: hidden;
-  z-index: 105;
+  z-index: 200;
 }
 
 .sub-btns-container.visible {
@@ -276,7 +319,7 @@ border-radius:50%;
   color: black;
   border: 1px solid white;
   padding: 0.3em 0.6em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   position: relative;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -287,11 +330,13 @@ border-radius:50%;
   transform: scale(1.2);
   z-index: 150;
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
 }
 
 /* Popup */
 .popup {
   font-family: 'Quicksand', sans-serif;
+  font-size: 0.75em;
   display: none;
   position: absolute;
   bottom: 110%;
@@ -299,13 +344,12 @@ border-radius:50%;
   transform: translateX(-50%);
   background: rgba(0,0,0,0.9);
   color: white;
-  padding: 0.5em 0.7em;
+  padding: 0.4em 0.6em;
   border-radius: 6px;
   white-space: normal;
   word-break: break-word;
-  max-width: 350px;
+  max-width: 340px;
   min-width: 150px;
-  font-size: 0.75em;
   line-height: 1.3em;
   z-index: 200;
   text-align: center;
@@ -320,31 +364,109 @@ border-radius:50%;
 .planet-position-btn {
   font-family: 'Audiowide', sans-serif;
   font-size: 17px;
-  padding: 0.7em 1.6em;
-  border: none;
-  border-radius: 25px;
-  background: transparent;
-  color: white;
+  padding: 14px;
+  background:rgba(255,255,255,0.2);
+  border:none;
+  border-radius:30px; 
+  color:rgb(226, 226, 226);
   cursor: pointer;
   z-index: 101;
   position: absolute;
   bottom: -150px;
   left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.2s ease;
+  transform: translate(-50%);
+  transition: transform .4s, box-shadow .4s;
 }
 
 .planet-position-btn:hover {
-  transform: translateX(-50%) scale(1.1);
-  color: rgb(219, 219, 219);
-  background: rgba(178,178,178,0.3);
+  transform: translate(-50%) scale(1.1);
+  box-shadow:0 0 25px rgb(215, 215, 215);
+  background-color: rgba(222, 222, 222, 0.6);
 }
 
 .planet-position-btn:active {
   transform: translateX(-50%) scale(0.95);
   background: rgba(137,137,137,0.3);
   border-radius: 25px;
-  color: black;
+}
+
+/* Fade-out effekt när man lämnar sidan */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Fade-in effekt när sidan laddas */
+body.fade-in {
+  opacity: 0;
+  animation: fadeInPage 2s forwards;
+}
+
+@keyframes fadeInPage {
+  to { opacity: 1; }
+}
+
+/* Vänsterpil tillbaka-knapp */
+.back-btn {
+  position: absolute;
+  top: 24%;
+  left: 600px;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(197, 197, 197, 0.2);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  color: rgb(205, 205, 205);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.6s;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.back-btn:active {
+  transform: translateY(-50%) scale(0.9);
+  background: rgba(180,180,180,0.4);
+}
+
+/* Tooltip för back-knappen */
+.back-tooltip {
+  position: absolute;
+  left: -350%; /* flytta tooltip till vänster om knappen */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;       /* dold som standard */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 400;
+}
+
+/* Visa tooltip på hover */
+.back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Swipe åt höger med fade */
+body.swipe-right {
+  animation: swipeRight 0.8s forwards;
 }
 
 .site-footer {
@@ -370,8 +492,235 @@ border-radius:50%;
   width: 100%;
   text-align: center;
   padding: 5px 0;
-  margin-top:200px;
   font-family: 'Quicksand', sans-serif;
   font-size: 13px;
   color: rgba(212, 212, 212, 0.7);
+}
+
+
+/* -------------------- */
+/* TABLET */
+/* -------------------- */
+@media (max-width: 1024px){
+
+.facts-title{
+font-size:20px;
+margin-top:120px;
+}
+
+.planet-title{
+font-size:45px;
+margin-top:80px;
+}
+
+.planet-subtitle{
+font-size:24px;
+}
+
+.solar-title{
+font-size:40px;
+top:80px;
+padding:15px 25px;
+}
+
+.planet-row{
+margin-top:350px;
+margin-left:0;
+gap:25px;
+}
+
+/* minska stora planeter */
+.jupiter{
+width:220px;
+height:220px;
+}
+
+.saturnus{
+width:200px;
+height:200px;
+}
+
+/* planetfakta */
+#planetTrack li{
+width:500px;
+height:500px;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:700px;
+height:700px;
+}
+
+.sub-btns-container{
+gap:80px;
+}
+
+.back-btn{
+left:50px;
+top:20%;
+}
+
+}
+
+
+/* -------------------- */
+/* MOBIL */
+/* -------------------- */
+@media (max-width:768px){
+
+.facts-title{
+font-size:16px;
+margin-top:80px;
+padding:0 20px;
+}
+
+.planet-title{
+font-size:32px;
+margin-top:60px;
+}
+
+.planet-subtitle{
+font-size:18px;
+}
+
+.enter-btn{
+font-size:16px;
+padding:12px;
+left:50%;
+}
+
+.solar-title{
+font-size:28px;
+top:40px;
+padding:10px 18px;
+}
+
+.planet-row{
+margin-top:250px;
+gap:18px;
+}
+
+/* planetstorlekar */
+.jupiter{
+width:140px;
+height:140px;
+}
+
+.saturnus{
+width:150px;
+height:150px;
+}
+
+.uranus{
+width:60px;
+height:60px;
+}
+
+.neptunus{
+width:60px;
+height:60px;
+}
+
+/* planetfakta */
+#planetTrack li{
+width:70vw;
+height:70vw;
+top:45%;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:85vw;
+height:85vw;
+}
+
+/* mittknapp */
+.planet-main-btn{
+font-size:26px;
+}
+
+/* subknappar */
+.sub-btns-container{
+gap:45px;
+}
+
+.sub-btn{
+font-size:0.9em;
+}
+
+/* popup */
+.popup{
+max-width:200px;
+font-size:0.65em;
+}
+
+/* tillbaka knapp */
+.back-btn{
+left:20px;
+top:15%;
+}
+
+}
+
+
+/* -------------------- */
+/* LITEN MOBIL */
+/* -------------------- */
+@media (max-width:480px){
+
+.facts-title{
+font-size:14px;
+margin-top:60px;
+}
+
+.planet-title{
+font-size:26px;
+}
+
+.solar-title{
+font-size:22px;
+}
+
+.planet-row{
+margin-top:200px;
+gap:12px;
+}
+
+/* ännu mindre planeter */
+.jupiter{
+width:100px;
+height:100px;
+}
+
+.saturnus{
+width:110px;
+height:110px;
+}
+
+/* subknappar närmare mitten */
+.sub-btns-container{
+gap:30px;
+}
+
+.planet-main-btn{
+font-size:20px;
+}
+
+.sub-btn{
+font-size:0.8em;
+padding:0.2em 0.4em;
+}
+
+/* popup ännu mindre */
+.popup{
+max-width:160px;
+font-size:0.6em;
+}
+
+/* tillbaka knapp */
+.back-btn{
+width:35px;
+height:35px;
+font-size:2rem;
+}
+
 }
