@@ -123,9 +123,12 @@ const onPlanetBtn = document.getElementById("onPlanetBtn");
 
 if(onPlanetBtn){
   onPlanetBtn.addEventListener("click", ()=>{
+    const planetName = activePlanet.dataset.name;
+
     document.body.classList.add("fade-out");
+
     setTimeout(()=>{
-      window.location.href="onplanet.html";
+      window.location.href = `onplanet.html?planet=${planetName}`;
     },800);
   });
 }

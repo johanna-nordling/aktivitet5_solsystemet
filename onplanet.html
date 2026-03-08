@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Quicksand&display=swap" rel="stylesheet">
 <title>På planeten</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body class="fade-in onplanet-page">
 
-</body>
+  <!-- Back-knapp -->
+  <button id="backBtn" class="back-btn">
+    &#8592;
+    <span class="back-tooltip">Tillbaka</span>
+  </button>
 
+  <!-- Samma pratbubbla för alla planeter -->
+  <div class="speech-container">
+    <button class="speech-btn">. . .</button>
+    <div class="speech-popup">
+      Fakta om planeten visas här när du hovrar.
+    </div>
+  </div>
+
+  <script src="onplanet.js"></script>
+</body>
 </html>
