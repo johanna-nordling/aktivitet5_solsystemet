@@ -117,3 +117,15 @@ posBtn.className = "planet-position-btn";
 posBtn.textContent = "Tillbaka till planeterna";
 posBtn.onclick = () => window.location.href = "solsystem.html";
 activePlanet.appendChild(posBtn);
+
+// Knapp till OnPlanet-sidan
+const onPlanetBtn = document.getElementById("onPlanetBtn");
+
+if(onPlanetBtn){
+  onPlanetBtn.addEventListener("click", ()=>{
+    document.body.classList.add("fade-out");
+    setTimeout(()=>{
+      window.location.href="onplanet.html";
+    },800);
+  });
+}
