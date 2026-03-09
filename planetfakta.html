@@ -16,32 +16,41 @@
 
 <body class="fade-in">
 
+<a href="#main" class="skip-link">Hoppa till innehållet</a>
+
 <h1 class="facts-title">KLICKA PÅ PLANETENS NAMN FÖR ATT TA DEL AV LITE FAKTA</h1>
 
-<main>
+<main id="main">
 
 <ul id="planetTrack">
 
 <li data-img="images/merkur.jpeg" data-name="Merkurius"></li>
+  <button class="planet-main-btn">Merkurius</button>
 
 <li data-img="images/venus.jpeg" data-name="Venus"></li>
+  <button class="planet-main-btn">Venus</button>
 
 <li data-img="images/jorden1.jpeg" data-name="Jorden"></li>
+  <button class="planet-main-btn">Jorden</button>
 
 <li data-img="images/mars.jpeg" data-name="Mars"></li>
+  <button class="planet-main-btn">Mars</button>
 
 <li data-img="images/jupiter.jpeg" data-name="Jupiter"></li>
+  <button class="planet-main-btn">Jupiter</button>
 
 <li data-img="images/saturnus1.jpeg" data-name="Saturnus"></li>
+  <button class="planet-main-btn">Saturnus</button>
 
 <li data-img="images/uranus.jpeg" data-name="Uranus"></li>
+  <button class="planet-main-btn">Uranus</button>
 
 <li data-img="images/neptunus.jpeg" data-name="Neptunus"></li>
-
+  <button class="planet-main-btn">Neptunus</button>
 </ul>
 
 <!-- Ny knapp -->
-<button id="onPlanetBtn" class="back-btn onplanet-btn">
+<button id="onPlanetBtn" class="back-btn onplanet-btn" aria-label="Nästa sida på planeten">
   &#8594;
   <span class="onplanet-tooltip">Se hur det kan se ut på planeten</span>
 </button>

@@ -11,12 +11,15 @@
 
 <body class="fade-in onplanet-page">
 
-  <!-- Back-knapp -->
-  <button id="backBtn" class="back-btn">
-    &#8592;
-    <span class="back-tooltip">Tillbaka</span>
-  </button>
+<a href="#main" class="skip-link">Hoppa till innehållet</a>
 
+  <!-- Back-knapp -->
+<button id="backBtn" class="back-btn" aria-label="Föregående sida">
+  &#8592;
+  <span class="back-tooltip">Tillbaka</span>
+</button>
+
+<main id="main">
   <!-- Samma pratbubbla för alla planeter -->
   <div class="speech-container">
     <button class="speech-btn">. . .</button>
@@ -24,7 +27,9 @@
       Fakta om planeten visas här när du hovrar.
     </div>
   </div>
+</main>
 
   <script src="onplanet.js"></script>
+
 </body>
 </html>

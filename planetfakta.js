@@ -87,6 +87,18 @@ container.className = "sub-btns-container";
   // Hämta unik fakta för planeten
   popup.textContent = planetFacts[activePlanet.dataset.name][title] || "Ingen fakta tillgänglig";
 
+    // --- ARIA / Tooltip ---
+  const safeTitle = title.toLowerCase().replace(/\s+/g, "-"); // temperatur -> temperatur
+  popup.id = `popup-${activePlanet.dataset.name.toLowerCase()}-${safeTitle}`;
+  popup.setAttribute("role", "tooltip");
+  subBtn.setAttribute("aria-describedby", popup.id);
+
+  // Visa popup på hover/fokus
+  subBtn.addEventListener("mouseenter", () => popup.style.display = "block");
+  subBtn.addEventListener("mouseleave", () => popup.style.display = "none");
+  subBtn.addEventListener("focus", () => popup.style.display = "block");
+  subBtn.addEventListener("blur", () => popup.style.display = "none");
+
   subBtn.appendChild(popup);
 
   // Visa popup på hover

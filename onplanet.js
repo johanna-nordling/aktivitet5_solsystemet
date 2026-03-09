@@ -38,6 +38,22 @@ if (planetBackgrounds[planet]) {
 const speechPopup = document.querySelector('.speech-popup');
 if (planetFacts[planet] && speechPopup) {
   speechPopup.textContent = planetFacts[planet];
+
+  // --- ARIA / Tooltip ---
+  speechPopup.id = `popup-${planet.toLowerCase()}`;
+  speechPopup.setAttribute("role", "tooltip");
+
+  const speechBtn = document.querySelector('.speech-btn');
+  if(speechBtn){
+    speechBtn.setAttribute("aria-describedby", speechPopup.id);
+
+    // Visa/dölj popup vid fokus (tangentbord)
+    speechBtn.addEventListener("focus", () => speechPopup.style.display = "block");
+    speechBtn.addEventListener("blur", () => speechPopup.style.display = "none");
+
+    // Popup start hidden
+    speechPopup.style.display = "none";
+  }
 }
 
 // Back-knapp

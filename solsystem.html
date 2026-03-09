@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Solsystemets planeter</title>
-
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Audiowide&display=swap" rel="stylesheet">
 
 </head>
@@ -17,34 +13,94 @@
 
 <body class="solar-page fade-in solar-bg">
 
+<a href="#main" class="skip-link">Hoppa till innehållet</a>
+
 <!-- Tillbaka-knapp med tooltip -->
-<button id="backBtn" class="back-btn">
+<button id="backBtn" class="back-btn" aria-label="Till startsidan">
   &#8592;
   <span class="back-tooltip">Till startsidan</span>
 </button>
+
+<main id="main">
 
 <h1 class="solar-title">SOLSYSTEMETS PLANETER</h1>
 
 <div class="planet-row">
 
-<img src="images/merkur.jpeg" class="planet-btn merkur" data-planet="Merkurius" alt="Merkurius">
+<img
+src="images/merkur.jpeg"
+class="planet-btn merkur"
+data-planet="Merkurius"
+alt="Merkurius"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Merkurius">
 
-<img src="images/venus.jpeg" class="planet-btn venus" data-planet="Venus" alt="Venus">
+<img
+src="images/venus.jpeg"
+class="planet-btn venus"
+data-planet="Venus"
+alt="Venus"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Venus">
 
-<img src="images/jorden.jpeg" class="planet-btn jorden" data-planet="Jorden" alt="Jorden">
+<img
+src="images/jorden.jpeg"
+class="planet-btn jorden"
+data-planet="Jorden"
+alt="Jorden"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Jorden">
 
-<img src="images/mars.jpeg" class="planet-btn mars" data-planet="Mars" alt="Mars">
+<img
+src="images/mars.jpeg"
+class="planet-btn mars"
+data-planet="Mars"
+alt="Mars"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Mars">
 
-<img src="images/jupiter.jpeg" class="planet-btn jupiter" data-planet="Jupiter" alt="Jupiter">
+<img
+src="images/jupiter.jpeg"
+class="planet-btn jupiter"
+data-planet="Jupiter"
+alt="Jupiter"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Jupiter">
 
-<img src="images/saturnus.jpeg" class="planet-btn saturnus" data-planet="Saturnus" alt="Saturnus">
+<img
+src="images/saturnus.jpeg"
+class="planet-btn saturnus"
+data-planet="Saturnus"
+alt="Saturnus"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Saturnus">
 
-<img src="images/uranus.jpeg" class="planet-btn uranus" data-planet="Uranus" alt="Uranus">
+<img
+src="images/uranus.jpeg"
+class="planet-btn uranus"
+data-planet="Uranus"
+alt="Uranus"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Uranus">
 
-<img src="images/neptunus.jpeg" class="planet-btn neptunus" data-planet="Neptunus" alt="Neptunus">
-
+<img
+src="images/neptunus.jpeg"
+class="planet-btn neptunus"
+data-planet="Neptunus"
+alt="Neptunus"
+role="button"
+tabindex="0"
+aria-label="Visa fakta om Neptunus">
 
 </div>
+</main>
 
 <footer class="site2-footer">
   <p>© 2026 Johanna Nordling</p>
