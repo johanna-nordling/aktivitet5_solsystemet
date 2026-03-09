@@ -160,6 +160,69 @@ opacity:0;
 transition:transform 5s, opacity .8s;
 }
 
+/* Vänsterpil tillbaka-knapp */
+.back-btn {
+  position: absolute;
+  top: 24%;
+  left: 600px;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(197, 197, 197, 0.2);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  color: rgb(205, 205, 205);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.6s;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.back-btn:active {
+  transform: translateY(-50%) scale(0.9);
+  background: rgba(180,180,180,0.4);
+}
+
+/* Tooltip för back-knappen */
+.back-tooltip {
+  position: absolute;
+  left: -350%; /* flytta tooltip till vänster om knappen */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;       /* dold som standard */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 400;
+}
+
+/* Visa tooltip på hover */
+.back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Swipe åt höger med fade */
+body.swipe-right {
+  animation: swipeRight 0.8s forwards;
+}
+
 /* SOLSYSTEM - olika storlekar planeter */
 .merkur{
 width:19px;
@@ -226,9 +289,9 @@ from{opacity:0}
 to{opacity:1}
 }
 
-
+/* -------------------- */
 /* PLANETFAKTA-SIDAN */
-
+/* -------------------- */
 #planetTrack{
 position:relative;
 height:60vh;
@@ -261,7 +324,6 @@ border-radius:50%;
 
 /* -------------------- */
 /* PLANETFAKTA DESIGN */
-/* -------------------- */
 
 /* Mittknappen på planeten */
 .planet-main-btn {
@@ -406,80 +468,6 @@ body.fade-in {
   to { opacity: 1; }
 }
 
-/* Vänsterpil tillbaka-knapp */
-.back-btn {
-  position: absolute;
-  top: 24%;
-  left: 600px;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-  background: rgba(197, 197, 197, 0.2);
-  border: 1px solid rgba(238, 238, 238, 0.2);
-  color: rgb(205, 205, 205);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.back-btn:hover {
-  transform: translateY(-50%) scale(1.2);
-  transition: transform 0.6s;
-  background: rgba(255, 255, 255, 0.4);
-  color: rgb(255, 255, 255);
-}
-
-.back-btn:active {
-  transform: translateY(-50%) scale(0.9);
-  background: rgba(180,180,180,0.4);
-}
-
-/* Tooltip för back-knappen */
-.back-tooltip {
-  position: absolute;
-  left: -350%; /* flytta tooltip till vänster om knappen */
-  font-family: 'Audiowide', sans-serif;
-  font-size: 17px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  opacity: 0;       /* dold som standard */
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 400;
-}
-
-/* Visa tooltip på hover */
-.back-btn:hover .back-tooltip {
-  opacity: 1;
-}
-
-/* Swipe åt höger med fade */
-body.swipe-right {
-  animation: swipeRight 0.8s forwards;
-}
-
-
-/* -------------------- */
-/* ONPLANET-SIDAN */
-/* -------------------- */
-.onplanet-page{
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  min-height:130vh;
-}
-
 /* Knapp till OnPlanet-sidan */
 .onplanet-btn{
   top:85%;
@@ -512,6 +500,17 @@ body.swipe-right {
 /* Visa text när man hovrar */
 .onplanet-btn:hover .onplanet-tooltip{
   opacity:1;
+}
+
+
+/* -------------------- */
+/* ONPLANET-SIDAN */
+/* -------------------- */
+.onplanet-page{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  min-height:130vh;
 }
 
 /* Wrapper */
@@ -660,24 +659,26 @@ body.onplanet-page .back-btn:hover {
 }
 
 
+/* ---------------------------- */
 /* -------------------- */
 /* TABLET */
 /* -------------------- */
-@media (max-width: 1024px){
+/* ---------------------------- */
+@media (max-width: 1200px){
 
 .facts-title{
-font-size:20px;
+font-size:25px;
 margin-top:120px;
 }
 
-/* -------------------- */
+/* ---------------- */
 /* STARTSIDA TITEL */
+/* ---------------- */
 .planet-title{
 font-size:45px;
 margin-top:80px;
 }
 
-/* -------------------- */
 /* STARTSIDA UNDERRUBRIK */
 .planet-subtitle{
 font-size:24px;
@@ -686,14 +687,14 @@ font-size:24px;
 
 /* ----------------- */
 /* SOLSYSTEM-SIDA */
+/* ----------------- */
 .solar-page{
 min-height:65vh;
 }
 
-/* -------------------- */
-/* SOLSYSTEM-SIDA RUBRIK */
+/* RUBRIK */
 .solar-title{
-font-size:20px;
+font-size:40px;
 top:80px;
 padding:15px 25px;
 }
@@ -714,17 +715,82 @@ width:180px;
 height:180px;
 }
 
-/* Till startsidan-knapp */
-.back-btn{
-left:100px; /*50*/
-top:25%; /*20*/
+/* Vänsterpil tillbaka-knapp */
+.back-btn {
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(197, 197, 197, 0.2);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  color: rgb(205, 205, 205);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
 }
+
+.back-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.6s;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.back-btn:active {
+  transform: translateY(-50%) scale(0.9);
+  background: rgba(180,180,180,0.4);
+}
+
+/* Tooltip för back-knappen */
+.back-tooltip {
+  position: absolute;
+  left: -300%; /* flytta tooltip till vänster om knappen */
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  top: 30%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;       /* dold som standard */
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 400;
+}
+
+/* Visa tooltip på hover */
+.back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Knapp till OnPlanet-sidan */
+.onplanet-btn{
+  top:85%;
+  left:auto;
+  right:130px; /* placerar den till höger om planeten */
+}
+
+.sub-btns-container{
+gap:80px;
+}
+
 
 /* ----------------- */
 /* PLANETFAKTA-SIDAN */
+/* ----------------- */
 #planetTrack li{
-width:500px;
-height:500px;
+width:600px;
+height:600px;
 }
 
 #planetTrack li[data-name="Saturnus"]{
@@ -732,20 +798,131 @@ width:700px;
 height:700px;
 }
 
-.sub-btns-container{
-gap:80px;
+/* Wrapper */
+.speech-container {
+  position: absolute;
+  top: 60%;
+  right: 43%;
 }
 
-.onplanet-btn{
-  right:100px;
+/* Glas-pratbubbla */
+.speech-btn {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+/* Hover-effekt */
+.speech-btn:hover {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Svansen på pratbubblan */
+.speech-btn::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 12px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Popup */
+.speech-popup {
+  display: none;
+  position: absolute;
+  left: 130%; /* till höger om bubblan */
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 550px;
+  min-width: 350px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 200;
+  pointer-events: none;
+  white-space: normal;
+}
+
+/* Visa popup när man hovrar bubblan */
+.speech-container:hover .speech-popup {
+  display: block;
+}
+
+/* TILLBAKA-KNAPP på ONPLANET-sidan */
+body.onplanet-page .back-btn {
+  top: 63.5%;        /* justera vertikalt */
+  left: 46%;      /* justera horisontellt */
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+}
+
+/* Tooltip text */
+body.onplanet-page .back-tooltip {
+  right: 150%;      /* placerar texten till höger om knappen */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-family: 'Audiowide', sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 200;
+  pointer-events: none;
+  white-space: normal;
+}
+
+/* Visa tooltip på hover */
+body.onplanet-page .back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Back-knappen på onplanet-sidan */
+body.onplanet-page .back-btn {
+    color: #000000; /* pilens färg på onplanet-sidan */
+    background: rgba(255, 255, 255, 0.5); /* knappens bakgrund */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+body.onplanet-page .back-btn:hover {
+    color: #000000; /* pilens färg vid hover */
+    background: rgba(255,255,255,0.3); /* bakgrund vid hover */
 }
 
 }
 
 
+/* ----------------------------- */
 /* -------------------- */
 /* MOBIL */
 /* -------------------- */
+/* ----------------------------- */
 @media (max-width:768px){
 
 .facts-title{
@@ -754,8 +931,9 @@ margin-top:80px;
 padding:0 20px;
 }
 
-/* -------------------- */
+/* ---------------- */
 /* STARTSIDA TITEL */
+/* ---------------- */
 .planet-title{
 font-size:32px;
 margin-top:60px;
@@ -773,9 +951,9 @@ padding:12px;
 left:50%;
 }
 
-
-/* ---------------- */
+/* -------------- */
 /* SOLSYSTEM-SIDA */
+/* -------------- */
 .solar-page{
 min-height:65vh; /* gör sidan längre än skärmen */
 }
@@ -783,8 +961,8 @@ min-height:65vh; /* gör sidan längre än skärmen */
 /* -------------------- */
 /* SOLSYSTEM-SIDA RUBRIK */
 .solar-title{
-font-size:17px; /* 28 */
-top:50px; /*40*/
+font-size:50px; /* 28 */
+top:70px; /*40*/
 padding:10px 18px;
 }
 
@@ -822,9 +1000,9 @@ top:15%;
 }
 
 
-/* ------------------ */
+/* ----------------- */
 /* PLANETFAKTA-SIDAN */
-
+/* ----------------- */
 .onplanet-btn{
   right:5px;
 }
@@ -867,40 +1045,43 @@ font-size:0.65em;
 
 }
 
-
+/* ---------------------------- */
 /* -------------------- */
 /* LITEN MOBIL */
 /* -------------------- */
+/* ---------------------------- */
 @media (max-width:480px){
 
-.facts-title{
-font-size:14px;
-margin-top:80px;
-}
 
+/* --------------- */
 /* STARTSIDA TITEL */
-/* -------------------- */
+/* --------------- */
 .planet-title{
 font-size:26px;
 }
 
-
+/* ---------------- */
 /* SOLSYSTEM-SIDA */
-/* -------------------- */
+/* ---------------- */
 .solar-page{
-min-height:65vh; /* gör sidan längre än skärmen */
+min-height:30vh; /* gör sidan längre än skärmen */
 }
 
 /* SOLSYSTEM-SIDA RUBRIK */
 /* -------------------- */
 .solar-title{
-font-size:15px;
+font-size:25px;
 }
 
 .planet-row{
-margin-top:200px;
-gap:12px;
-left:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:28px;
+margin-top:300px;
+padding-bottom:-150px;
+margin-left:35px;
+flex-wrap:wrap;
 }
 
 .jupiter{
@@ -933,12 +1114,245 @@ max-width:160px;
 font-size:0.6em;
 }
 
-/* tillbaka knapp */
-.back-btn{
-width:35px;
-height:35px;
-font-size:2rem;
-left:20px;
+/* Vänsterpil tillbaka-knapp */
+.back-btn {
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(197, 197, 197, 0.5);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  color: rgb(205, 205, 205);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.6s;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.back-btn:active {
+  transform: translateY(-50%) scale(0.9);
+  background: rgba(180,180,180,0.4);
+}
+
+.site2-footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin-top:120px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  color: rgba(212, 212, 212, 0.7);
+}
+
+/* ----------------- */
+/* PLANETFAKTA-SIDAN */
+/* ----------------- */
+
+.facts-title{
+font-size:24px;
+margin-top:80px;
+}
+
+#planetTrack{
+position:relative;
+height:60vh;
+margin-top:20px;
+min-height:120vh;
+}
+
+#planetTrack li{
+position:absolute;
+top:45%;
+left:50%;
+width:330px;
+height:330px;
+transform:translate(-50%,-50%);
+background-size:cover;
+border-radius:50%;
+}
+
+/* Ändra storlek på Saturnus på planetfakta-sidan */
+#planetTrack li[data-name="Saturnus"] {
+  width: 1100px;   /* ny bredd */
+  height: 1100px;  /* ny höjd */
+}
+
+/* Flytta knappen under Saturnus närmare planeten */
+#planetTrack li[data-name="Saturnus"] .planet-position-btn {
+  bottom: 30px;  /* ändra från t.ex. -150px till -80px för att komma närmare */
+}
+
+/* MITTKNAPP */
+.planet-main-btn{
+font-size:26px;
+}
+
+/* Container för subknappar */
+.sub-btns-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 60px;
+  padding-top: 40px;
+  margin-top: -7px;
+  visibility: hidden;
+  z-index: 200;
+}
+
+.sub-btn{
+font-size:1em;
+}
+
+/* POPUP */
+.popup{
+max-width:200px;
+font-size:0.7em;
+}
+
+/* Knapp till OnPlanet-sidan */
+.onplanet-btn{
+  top:50%;
+  left:auto;
+  right:170px; /* placerar den till höger om planeten */
+}
+
+/* ---------------- */
+/* ONPLANET-SIDA */
+/* ---------------- */
+
+
+/* Wrapper */
+.speech-container {
+  position: absolute;
+  top: 60%;
+  right: 42%; 
+}
+
+/* Glas-pratbubbla */
+.speech-btn {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+/* Hover-effekt */
+.speech-btn:hover {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Svansen på pratbubblan */
+.speech-btn::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 12px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Popup */
+.speech-popup {
+  display: none;
+  position: absolute;
+  left: 130%; /* till höger om bubblan */
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  min-width: 400px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 200;
+  pointer-events: none;
+  white-space: normal;
+}
+
+/* Visa popup när man hovrar bubblan */
+.speech-container:hover .speech-popup {
+  display: block;
+}
+
+/* Placering för onplanet-sidan */
+body.onplanet-page .back-btn {
+  top: 72.5%;        /* justera vertikalt */
+  left: 46%;      /* justera horisontellt */
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+}
+
+/* Tooltip text */
+body.onplanet-page .back-tooltip {
+  right: 150%;      /* placerar texten till höger om knappen */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-family: 'Audiowide', sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 200;
+  pointer-events: none;
+  white-space: normal;
+}
+
+/* Visa tooltip på hover */
+body.onplanet-page .back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Back-knappen på onplanet-sidan */
+body.onplanet-page .back-btn {
+    color: #000000; /* pilens färg på onplanet-sidan */
+    background: rgba(255, 255, 255, 0.5); /* knappens bakgrund */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+body.onplanet-page .back-btn:hover {
+    color: #000000; /* pilens färg vid hover */
+    background: rgba(255,255,255,0.3); /* bakgrund vid hover */
 }
 
 }

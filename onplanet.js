@@ -3,7 +3,7 @@ const planet = new URLSearchParams(window.location.search).get("planet");
 
 // Bakgrundsbilder för varje planet
 const planetBackgrounds = {
-  "Merkurius": { img: "images/onmerkur.jpeg", size: "100%", position: "center" },
+  "Merkurius": { img: "images/onmerkur.jpeg", size: "cover", position: "center" },
   "Venus": { img: "images/onvenus.jpeg", size: "cover", position: "center" },
   "Jorden": { img: "images/onjorden.jpeg", size: "cover", position: "center" },
   "Mars": { img: "images/onmars.jpeg", size: "cover", position: "center bottom" },
