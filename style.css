@@ -601,6 +601,10 @@ color:rgba(255,255,255,0.7);
   white-space: normal;
 }
 
+.speech-container:hover .speech-popup {
+display:block;
+}
+
 /* Visa popup när man hovrar bubblan */
 .speech-container:hover .speech-popup {
   display: block;

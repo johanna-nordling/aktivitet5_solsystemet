@@ -51,6 +51,15 @@ if (planetFacts[planet] && speechPopup) {
     speechBtn.addEventListener("focus", () => speechPopup.style.display = "block");
     speechBtn.addEventListener("blur", () => speechPopup.style.display = "none");
 
+    // Klick för mobil/tablet
+  speechBtn.addEventListener("click", () => {
+    if (speechPopup.style.display === "block") {
+      speechPopup.style.display = "none";
+    } else {
+      speechPopup.style.display = "block";
+    }
+  });
+
     // Popup start hidden
     speechPopup.style.display = "none";
   }
