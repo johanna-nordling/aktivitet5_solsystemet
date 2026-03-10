@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
       introText.classList.remove("show");
     }
 
-  },3000);
+  },2000);
 
 });
 
