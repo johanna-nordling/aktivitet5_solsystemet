@@ -342,8 +342,8 @@ border-radius:50%;
 
 /* Ändra storlek på Saturnus på planetfakta-sidan */
 #planetTrack li[data-name="Saturnus"] {
-  width: 1100px;   /* ny bredd */
-  height: 1100px;  /* ny höjd */
+  width: 1000px;   /* ny bredd */
+  height: 1000px;  /* ny höjd */
 }
 
 /* Flytta knappen under Saturnus närmare planeten */
