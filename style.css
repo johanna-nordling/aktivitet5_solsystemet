@@ -49,9 +49,9 @@ margin-bottom:20px;
 }
 
 .planet-subtitle{
-font-family:'Quicksand';
+font-family:'Quicksand', sans-serif;
 text-align:center;
-font-size:30px;
+font-size:25px;
 margin-top:20px;
 color:rgba(255,255,255,0.7);
 }
@@ -352,7 +352,7 @@ border-radius:50%;
 }
 
 .facts-title{
-font-family:'Quicksand';
+font-family:'Quicksand', sans-serif;
 text-align:center;
 font-size:23px;
 margin-top:190px;
