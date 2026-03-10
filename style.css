@@ -114,7 +114,7 @@ transition:transform 10s, opacity .8s;
 
 /* gör sidan längre */
 .solar-page{
-  min-height:200vh; /* gör sidan längre än skärmen */
+  min-height:100vh; /* gör sidan längre än skärmen */
 }
 
 /* RUBRIK-BOX */
@@ -139,6 +139,32 @@ gap:40px;
 margin-top:530px;
 margin-left:190px;
 flex-wrap:wrap;
+}
+
+/* Introtext när sidan öppnas */
+.planet-intro-text{
+position:absolute;
+left:50%;
+top:45%;
+transform:translate(-50%,-50%);
+font-family:'Audiowide';
+font-size:35px;
+color:rgb(232, 232, 232);
+text-shadow:0 0 10px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0);
+opacity:0;
+pointer-events:none;
+transition:opacity .5s;
+z-index:500;
+}
+
+.planet-intro-text.show{
+opacity:1;
+}
+
+/* Klass som aktiverar hover-effekten automatiskt */
+.planet-btn.intro-glow{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
 }
 
 .planet-btn{
@@ -1069,6 +1095,16 @@ body.onplanet-page .back-btn:hover .back-tooltip {
 body.onplanet-page .back-btn {
   top:73%;
   left:45%;
+}
+
+/* ----------------------------- */
+/* Reduced Motion / Tillgänglighet */
+/* ----------------------------- */
+@media (prefers-reduced-motion: reduce){
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 }

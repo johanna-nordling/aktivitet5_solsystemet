@@ -1,6 +1,36 @@
 // Hämta alla planetknappar
 const planets = document.querySelectorAll(".planet-btn");
 
+// Intro-animation när sidan laddas
+window.addEventListener("load", () => {
+
+  const planets = document.querySelectorAll(".planet-btn");
+  const introText = document.querySelector(".planet-intro-text");
+
+  // visa text
+  if(introText){
+    introText.classList.add("show");
+  }
+
+  // tänd alla planeter
+  planets.forEach(p => {
+    p.classList.add("intro-glow");
+  });
+
+  // stäng av efter 4 sek
+  setTimeout(()=>{
+    planets.forEach(p => {
+      p.classList.remove("intro-glow");
+    });
+
+    if(introText){
+      introText.classList.remove("show");
+    }
+
+  },3000);
+
+});
+
 planets.forEach((planet, index) => {
 
   // Klick på planeten
