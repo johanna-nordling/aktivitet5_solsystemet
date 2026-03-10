@@ -43,35 +43,31 @@ if (planetFacts[planet] && speechPopup) {
   speechPopup.id = `popup-${planet.toLowerCase()}`;
   speechPopup.setAttribute("role", "tooltip");
 
-  const speechBtn = document.querySelector('.speech-btn');
-  if(speechBtn){
-    speechBtn.setAttribute("aria-describedby", speechPopup.id);
+const speechBtn = document.querySelector('.speech-btn');
+if(speechBtn){
+  speechBtn.setAttribute("aria-describedby", speechPopup.id);
 
-    // Visa/dölj popup vid fokus (tangentbord)
-    speechBtn.addEventListener("focus", () => speechPopup.style.display = "block");
-    speechBtn.addEventListener("blur", () => speechPopup.style.display = "none");
+    // Klick = visa/dölj popup
+    speechBtn.addEventListener("click", () => {
+      speechPopup.classList.toggle("show-popup");
+    });
 
-    // Klick för mobil/tablet
-  speechBtn.addEventListener("click", () => {
-    if (speechPopup.style.display === "block") {
-      speechPopup.style.display = "none";
-    } else {
-      speechPopup.style.display = "block";
-    }
-  });
-
-    // Popup start hidden
-    speechPopup.style.display = "none";
   }
 }
 
 // Back-knapp
 const backBtn = document.getElementById("backBtn");
+
 if (backBtn) {
+
   backBtn.addEventListener("click", () => {
+
     document.body.classList.add("fade-out");
+
     setTimeout(() => {
       window.location.href = `planetfakta.html?planet=${planet}`;
     }, 800);
+
   });
+
 }
