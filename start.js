@@ -9,7 +9,7 @@ document.body.classList.add("fade-out");
 
 setTimeout(()=>{
 
-window.location.href="solsystem.html";
+window.location = btn.href;
 
 },800);
 
