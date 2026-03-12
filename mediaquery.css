@@ -371,6 +371,15 @@ font-size:0.7rem;
   background: rgba(197, 197, 197, 0.5);
 }
 
+/* Tooltip "Se hur det kan..." över pilen */
+.onplanet-tooltip{
+  left:-17vw;/*-7.5vh*/
+  top:-8vw;/*-5vh*/
+  font-size:13px;
+  max-width: 340px;
+  min-width: 150px;
+}
+
 .site2-footer {
   margin-top:13vh;
 }
