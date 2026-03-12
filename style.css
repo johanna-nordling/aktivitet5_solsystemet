@@ -61,7 +61,7 @@ color:rgba(255,255,255,0.7);
 .start-image-container{
 position:relative;
 width:90%;
-max-width:1200px;
+max-width:90%;/*1200px;*/
 margin:80px auto;
 }
 
@@ -122,7 +122,7 @@ position:absolute;
 top:120px;
 right:0;
 font-family:'Audiowide', sans-serif;
-font-size:70px;
+font-size:4.5rem; /*70px*/
 color:rgb(232, 232, 232);
 padding:20px 40px;
 background:rgba(179, 179, 179, 0.3);
@@ -135,8 +135,9 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:40px;
-margin-top:530px;
-margin-left:190px;
+margin-top:60vh;/*530px*/
+margin-left:10%;
+/*margin-left:190px;*/
 flex-wrap:wrap;
 }
 
@@ -192,8 +193,8 @@ transition:transform 5s, opacity .8s;
 /* Vänsterpil tillbaka-knapp */
 .back-btn {
   position: absolute;
-  top: 25%;
-  left: 430px;
+  top: 26%;
+  left: 23%;/*430px*/
   transform: translateY(-50%);
   font-size: 2.5rem;
   background: rgba(197, 197, 197, 0.2);
@@ -254,8 +255,8 @@ body.swipe-right {
 
 /* SOLSYSTEM - olika storlekar planeter */
 .merkur{
-width:19px;
-height:19px;
+width:clamp(10px, 1.6vw, 19px);
+height:clamp(10px, 1.6vw, 19px);
 }
 
 .merkur:hover{
@@ -264,18 +265,18 @@ box-shadow:0 0 30px white;
 }
 
 .venus{
-width:44px;
-height:44px;
+width:clamp(20px, 3vw, 44px);
+height:clamp(20px, 3vw, 44px);
 }
 
 .jorden{
-width:48px;
-height:48px;
+width:clamp(22px, 3.2vw, 48px);
+height:clamp(22px, 3.2vw, 48px);
 }
 
 .mars{
-width:25px;
-height:25px;
+width:clamp(12px, 2vw, 25px);
+height:clamp(12px, 2vw, 25px);
 }
 
 .mars:hover{
@@ -284,8 +285,8 @@ box-shadow:0 0 30px white;
 }
 
 .jupiter{
-width:350px;
-height:350px;
+width:clamp(150px, 25vw, 350px);
+height:clamp(150px, 25vw, 350px);
 }
 
 .jupiter:hover{
@@ -294,8 +295,8 @@ box-shadow:0 0 30px white;
 }
 
 .saturnus{
-width:320px;
-height:320px;
+width:clamp(140px, 25vw, 320px);
+height:clamp(140px, 25vw, 320px);
 }
 
 .saturnus:hover{
@@ -304,13 +305,13 @@ box-shadow:0 0 30px white;
 }
 
 .uranus{
-width:90px;
-height:90px;
+width:clamp(50px, 6vw, 90px);
+height:clamp(50px, 6vw, 90px);
 }
 
 .neptunus{
-width:85px;
-height:85px;
+width:clamp(50px, 6vw, 85px);
+height:clamp(50px, 6vw, 85px);
 }
 
 @keyframes fadeIn{
@@ -714,6 +715,13 @@ font-size:24px;
 /* ----------------- */
 .solar-page{
 min-height:65vh;
+}
+
+.solar-bg{
+  background-image: url("images/sol.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* RUBRIK */

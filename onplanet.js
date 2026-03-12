@@ -15,7 +15,7 @@ const planetBackgrounds = {
 
 // Fakta för varje planet
 const planetFacts = {
-  "Merkurius": "Från Merkurius himmel ser man en bländande solskiva då solen ser mycket större ut än vad vi är vana vid. Men himlen kommer alltid att vara svart även på dagen, då atmosfären är i princip obefintlig. Marken är lik den på månen, grå och fylld av kratrar.",
+  "Merkurius": "Från Merkurius himmel syns en bländande solskiva då solen ser mycket större ut än vad vi är vana vid. Men himlen kommer alltid att vara svart även på dagen, då atmosfären är i princip obefintlig. Marken är lik den på månen, grå och fylld av kratrar.",
   "Venus": "Befinner vi oss på Venus är vi i en kvav, het och tjock dimma vilket gör sikten begränsad. Marken är fylld av steniga formationer. Temperaturen är obeskrivligt varm, och trycket från planeten ger en ständig känsla av att kroppen trycks nedåt med stor kraft.",
   "Jorden": "Här känns det bekant, levande och man hör ljud från allt liv som finns på planeten. Luften är fylld med syre och temperaturen är oftast behaglig. Miljön innehåller hav, floder och glaciärer. Geologiska strukturer täcker marken som berg, jord och vulkaner. Den är levande med mikroorganismer, växter, människor och djur i ekosystem som samspelar.",
   "Mars": "På Mars är luften mycket tunn, dammig och fylld av röda partiklar. Man är omringad av dalar, kratrar och vulkaner. Kallt är det och solen ser ännu mindre ut på himlen än från Jorden.",
