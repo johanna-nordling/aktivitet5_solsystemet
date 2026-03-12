@@ -1,0 +1,453 @@
+/* ---------------------------- */
+/* -------------------- */
+/* TABLET */
+/* -------------------- */
+/* ---------------------------- */
+@media (max-width: 1024px){
+
+.facts-title{
+font-size:25px;
+margin-top:120px;
+}
+
+/* ---------------- */
+/* STARTSIDA TITEL */
+/* ---------------- */
+.planet-title{
+font-size:45px;
+margin-top:80px;
+}
+
+/* STARTSIDA UNDERRUBRIK */
+.planet-subtitle{
+font-size:24px;
+}
+
+
+/* ----------------- */
+/* SOLSYSTEM-SIDA */
+/* ----------------- */
+.solar-page{
+min-height:65vh;
+}
+
+.solar-bg{
+  background-image: url("images/sol.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* RUBRIK */
+.solar-title{
+font-size:40px;
+top:80px;
+padding:15px 25px;
+}
+
+.planet-row{
+margin-top:350px;
+margin-left:100px;
+gap:25px;
+}
+
+.jupiter{
+width:180px;
+height:180px;
+}
+
+.saturnus{
+width:180px;
+height:180px;
+}
+
+/* Vänsterpil / Tillbaka-knapp */
+.back-btn {
+  top: 22%;
+  left: 35%;
+}
+
+/* Tooltip / Back-knappen */
+.back-tooltip {
+  left: -355%; /* flytta tooltip till vänster om knappen */
+  top: 40%;
+}
+
+/* Knapp till OnPlanet-sidan */
+.onplanet-btn{
+  top:85%;
+  left:auto;
+  right:130px; /* placerar den till höger om planeten */
+}
+
+.sub-btns-container{
+gap:80px;
+}
+
+
+/* ----------------- */
+/* PLANETFAKTA-SIDAN */
+/* ----------------- */
+#planetTrack li{
+width:600px;
+height:600px;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:700px;
+height:700px;
+}
+
+
+/* ----------------- */
+/* ONPLANET-SIDAN */
+/* ----------------- */
+/* Wrapper */
+.speech-container {
+  position: absolute;
+  top: 60%;
+  right: 43%;
+}
+
+/* Popup */
+.speech-popup {
+  max-width: 550px;
+  min-width: 350px;
+  font-size: 18px;
+}
+
+/* TILLBAKA-KNAPP / ONPLANET-sidan */
+body.onplanet-page .back-btn {
+  top: 63.5%;        /* justera vertikalt */
+}
+
+}
+
+
+/* ----------------------------- */
+/* -------------------- */
+/* MOBIL */
+/* -------------------- */
+/* ----------------------------- */
+@media (max-width:768px){
+
+.facts-title{
+font-size:16px;
+margin-top:80px;
+padding:0 20px;
+}
+
+/* ---------------- */
+/* STARTSIDA TITEL */
+/* ---------------- */
+.planet-title{
+font-size:32px;
+margin-top:60px;
+}
+
+/* -------------------- */
+/* STARTSIDA UNDERRUBRIK */
+.planet-subtitle{
+font-size:18px;
+}
+
+.enter-btn{
+font-size:16px;
+padding:12px;
+left:50%;
+}
+
+/* -------------- */
+/* SOLSYSTEM-SIDA */
+/* -------------- */
+.solar-page{
+min-height:65vh;
+}
+
+/* -------------------- */
+/* SOLSYSTEM-SIDA RUBRIK */
+.solar-title{
+font-size:50px; /* 28 */
+top:70px; /*40*/
+padding:10px 18px;
+}
+
+.planet-row{
+margin-top:250px;
+gap:18px;
+}
+
+/* ---------------- */
+/* PLANETSTORLEKAR */
+.jupiter{
+width:140px;
+height:140px;
+}
+
+.saturnus{
+width:150px;
+height:150px;
+}
+
+.uranus{
+width:60px;
+height:60px;
+}
+
+.neptunus{
+width:60px;
+height:60px;
+}
+
+/* Till startsidan knapp */
+.back-btn{
+left:5px;
+top:15%;
+}
+
+
+/* ----------------- */
+/* PLANETFAKTA-SIDAN */
+/* ----------------- */
+.onplanet-btn{
+  right:5px;
+}
+
+#planetTrack{
+height:50vh;
+margin-top:20px;
+}
+
+#planetTrack li{
+width:70vw;
+height:70vw;
+top:45%;
+}
+
+#planetTrack li[data-name="Saturnus"]{
+width:85vw;
+height:85vw;
+}
+
+/* MITTKNAPP */
+.planet-main-btn{
+font-size:26px;
+}
+
+/* SUBKNAPPAR */
+.sub-btns-container{
+gap:45px;
+}
+
+.sub-btn{
+font-size:0.9em;
+}
+
+/* POPUP */
+.popup{
+max-width:200px;
+font-size:0.65em;
+}
+
+}
+
+/* ---------------------------- */
+/* -------------------- */
+/* LITEN MOBIL */
+/* -------------------- */
+/* ---------------------------- */
+@media (max-width:480px){
+
+
+/* --------------- */
+/* STARTSIDA TITEL */
+/* --------------- */
+.planet-title{
+font-size:2rem;
+}
+
+/* ---------------- */
+/* SOLSYSTEM-SIDA */
+/* ---------------- */
+.solar-page{
+min-height:30vh; /* gör sidan längre än skärmen */
+}
+
+/* SOLSYSTEM-SIDA RUBRIK */
+/* -------------------- */
+.solar-title{
+font-size:1.7rem;
+}
+
+.planet-row{
+gap:3vh;
+margin-top:40vh;
+margin-bottom:5vh;
+margin-left:35px;
+}
+
+.facts-title{
+font-size:24px;
+margin-top:80px;
+}
+
+#planetTrack{
+position:relative;
+height:60vh;
+margin-top:20px;
+min-height:110vh;
+}
+
+#planetTrack li{
+top:45%;
+width:330px;
+height:330px;
+}
+
+/* Ändra storlek på Saturnus på planetfakta-sidan */
+#planetTrack li[data-name="Saturnus"] {
+  width: 390px;   /* ny bredd */
+  height: 390px;  /* ny höjd */
+  top:45%;
+}
+
+/* Flytta knappen under Saturnus närmare planeten */
+#planetTrack li[data-name="Saturnus"] .planet-position-btn {
+  bottom: -50px;
+}
+
+/* Introtext när sidan öppnas */
+.planet-intro-text{
+left:50%;
+top:60%;
+font-size:1.5rem;
+}
+
+.planet-intro-text.show{
+opacity:1;
+}
+
+/* Klass som aktiverar hover-effekten automatiskt */
+.planet-btn.intro-glow{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
+}
+
+.jupiter{
+width:15vh;
+height:15vh;
+}
+
+.saturnus{
+width:16vh;
+height:16vh;
+}
+
+/* ----------------- */
+/* PLANETFAKTA-SIDAN */
+/* ----------------- */
+
+/* subknappar närmare mitten */
+.sub-btns-container{
+gap:30px;
+}
+
+.sub-btn{
+font-size:0.8em;
+padding:0.2em 0.4em;
+}
+
+/* popup ännu mindre */
+.popup{
+max-width:7rem;
+min-width:6.5rem;
+font-size:0.7rem;
+}
+
+/* Vänsterpil tillbaka-knapp */
+.back-btn {
+  top: 32%;
+  left: 45%;
+  background: rgba(197, 197, 197, 0.5);
+}
+
+.site2-footer {
+  margin-top:13vh;
+}
+
+/* MITTKNAPP */
+.planet-main-btn{
+font-size:2rem;
+}
+
+/* Container för subknappar */
+.sub-btns-container {
+  gap: 8vh;
+}
+
+.sub-btn{
+font-size:1em;
+}
+
+/* Knapp till OnPlanet-sidan */
+.onplanet-btn{
+  top:50%;
+  left:auto;
+  right:23vh; /* placerar den till höger om planeten */
+}
+
+/* Knappen under planeten */
+.planet-position-btn {
+  font-size: 1.1rem;
+  padding: 14px;
+  margin-bottom:-10vh;
+  border-radius:3vh; 
+  left: 50%;
+}
+
+/* ---------------- */
+/* ONPLANET-SIDA */
+/* ---------------- */
+
+/* Wrapper */
+.speech-container {
+  position: absolute;
+  top: 60%;
+  right: 42%; 
+}
+
+/* Popup */
+.speech-popup {
+  font-size: 1.1rem;
+}
+
+/* Tooltip-back text */
+body.onplanet-page .back-tooltip {
+  right: 150%;      /* placerar texten till höger om knappen */
+  top: 50%;
+  font-size:0.8rem;
+  padding:1vh;
+}
+
+/* Visa tooltip på hover */
+body.onplanet-page .back-btn:hover .back-tooltip {
+  opacity: 1;
+}
+
+/* Back-knappen på onplanet-sidan */
+body.onplanet-page .back-btn {
+  top:73%;
+  left:45%;
+}
+
+/* ----------------------------- */
+/* Reduced Motion / Tillgänglighet */
+/* ----------------------------- */
+@media (prefers-reduced-motion: reduce){
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+}

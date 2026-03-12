@@ -1,0 +1,228 @@
+/* -------------------- */
+/* PLANETFAKTA-SIDAN */
+/* -------------------- */
+#planetTrack{
+position:relative;
+height:60vh;
+margin-top:20px;
+min-height:150vh;
+}
+
+#planetTrack li{
+position:absolute;
+top:44%;
+left:50%;
+width:87vh;
+height:87vh;
+transform:translate(-50%,-50%);
+background-size:cover;
+border-radius:50%;
+}
+
+/* Ändra storlek på Saturnus / Planetfakta-sidan */
+#planetTrack li[data-name="Saturnus"] {
+  width: 120vh;
+  height: 120vh;
+}
+
+/* Flytta knappen under Saturnus närmare planeten */
+#planetTrack li[data-name="Saturnus"] .planet-position-btn {
+  bottom: 10vh;
+}
+
+.facts-title{
+font-family:'Quicksand', sans-serif;
+text-align:center;
+font-size:23px;
+margin-top:30vh;
+color:rgba(255,255,255,0.7);
+}
+
+/* -------------------- */
+/* PLANETFAKTA DESIGN */
+
+/* Mittknappen på planeten */
+.planet-main-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Audiowide', sans-serif;
+  background: transparent;
+  color: black;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  font-size: 40px;
+  z-index: 300;
+  border: none;
+  border-radius: 35px;
+  transition: all 0.5s ease;
+}
+
+.planet-main-btn:hover {
+  transform: translate(-50%, -50%) scale(1.6); /* förstoras */
+}
+
+.planet-main-btn:active {
+  background: transparent;
+  border-radius: 35px;
+  transition: all 0.5s ease;
+  color: black;
+}
+
+/* Container / Subknappar */
+.sub-btns-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 135px;
+  padding-top: 40px;
+  margin-top: -7px;
+  visibility: hidden;
+  z-index: 200;
+}
+
+.sub-btns-container.visible {
+  visibility: visible;
+}
+
+/* Subknappar */
+.sub-btn {
+  font-family: 'Audiowide', sans-serif;
+  background: rgba(255,255,255,0.4);
+  color: black;
+  border: 1px solid white;
+  padding: 0.3em 0.6em;
+  font-size: 1.3em;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover-effekt / Subknappen visas */
+.sub-btn:hover {
+  transform: scale(1.2);
+  z-index: 150;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+}
+
+/* Popup */
+.popup {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.75em;
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 20rem;
+  min-width: 10rem;
+  line-height: 1.3em;
+  z-index: 200;
+  text-align: center;
+}
+
+.popup-bottom {
+  top: 110%;
+  bottom: auto;
+}
+
+/* Knappen under planeten */
+.planet-position-btn {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1.1rem;
+  padding: 14px;
+  background:rgba(255,255,255,0.2);
+  border:none;
+  border-radius:30px; 
+  color:rgb(226, 226, 226);
+  cursor: pointer;
+  z-index: 101;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%);
+  transition: transform .4s, box-shadow .4s;
+}
+
+.planet-position-btn:hover {
+  transform: translate(-50%) scale(1.1);
+  box-shadow:0 0 25px rgb(215, 215, 215);
+  background-color: rgba(222, 222, 222, 0.6);
+}
+
+.planet-position-btn:active {
+  transform: translateX(-50%) scale(0.95);
+  background: rgba(137,137,137,0.3);
+  border-radius: 25px;
+}
+
+/* Pil-knapp till OnPlanet-sidan */
+.onplanet-btn{
+  position: absolute;
+  top: 103vh;
+  right:24vh;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(197, 197, 197, 0.2);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  color: rgb(205, 205, 205);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Tooltip "Se hur det kan..." över pilen */
+.onplanet-tooltip{
+  position: absolute;
+  right: -13vh;
+  font-family: 'Audiowide', sans-serif;
+  top: -3vh;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  word-break: break-word;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 400;
+}
+
+/* Visa text när man hovrar */
+.onplanet-btn:hover .onplanet-tooltip{
+  opacity:1;
+}
+
+.onplanet-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  transition: transform 0.6s;
+  background: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+}
+
+.onplanet-btn:active {
+  transform: translateY(-50%) scale(0.9);
+  background: rgba(180,180,180,0.4);
+}
+

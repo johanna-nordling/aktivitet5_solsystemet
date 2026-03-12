@@ -1,0 +1,159 @@
+/*-----------------*/
+/* SOLSYSTEM */
+/*-----------------*/
+
+/* Bakgrundsbild */
+.solar-bg{
+  background-image: url("images/sol.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.solar-page{
+  min-height:95vh;
+}
+
+/* RUBRIK-BOX */
+.solar-title{
+position:absolute;
+top:120px;
+right:0;
+font-family:'Audiowide', sans-serif;
+font-size:8vh;
+color:rgb(232, 232, 232);
+padding:20px 40px;
+background:rgba(179, 179, 179, 0.3);
+backdrop-filter:blur(6px);
+border-radius:20px 0 0 20px;
+}
+
+.planet-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:2rem;
+margin-top:65vh;
+margin-left:10%;
+flex-wrap:wrap;
+}
+
+/* Introtext när sidan öppnas */
+.planet-intro-text{
+position:absolute;
+left:55%;
+top:50%;
+transform:translate(-50%,-50%);
+font-family:'Audiowide';
+font-size:4vh;
+color:rgb(0, 0, 0);
+text-shadow:0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
+opacity:0;
+pointer-events:none;
+transition:opacity .5s;
+z-index:500;
+}
+
+.planet-intro-text.show{
+opacity:1;
+}
+
+/* Klass som aktiverar hover-effekten automatiskt */
+.planet-btn.intro-glow{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
+}
+
+.planet-btn{
+width:110px;
+height:110px;
+border-radius:50%;
+cursor:pointer;
+transition:transform .5s, box-shadow .5s;
+}
+
+.fade-in{
+animation:fadeIn 1s;
+}
+
+.planet-btn:hover{
+transform:scale(1.4);
+box-shadow:0 0 30px white;
+}
+
+.planet-btn.zoom{
+transform:scale(20);
+opacity:0;
+transition:transform 5s, opacity .8s;
+}
+
+/* Swipe åt höger med fade */
+body.swipe-right {
+  animation: swipeRight 0.8s forwards;
+}
+
+/* SOLSYSTEM / Storlekar planeter */
+.merkur{
+width:clamp(10px, 1.6vw, 19px);
+height:clamp(10px, 1.6vw, 19px);
+}
+
+.merkur:hover{
+transform:scale(2.5);
+box-shadow:0 0 30px white;
+}
+
+.venus{
+width:clamp(20px, 3vw, 44px);
+height:clamp(20px, 3vw, 44px);
+}
+
+.jorden{
+width:clamp(22px, 3.2vw, 48px);
+height:clamp(22px, 3.2vw, 48px);
+}
+
+.mars{
+width:clamp(12px, 2vw, 25px);
+height:clamp(12px, 2vw, 25px);
+}
+
+.mars:hover{
+transform:scale(2);
+box-shadow:0 0 30px white;
+}
+
+.jupiter{
+width:20%;/*clamp(150px, 25vw, 350px);*/
+height:20%;/*clamp(150px, 25vw, 350px);*/
+}
+
+.jupiter:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
+}
+
+.saturnus{
+width:clamp(140px, 25vw, 320px);
+height:clamp(140px, 25vw, 320px);
+}
+
+.saturnus:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
+}
+
+.uranus{
+width:clamp(50px, 6vw, 90px);
+height:clamp(50px, 6vw, 90px);
+}
+
+.neptunus{
+width:clamp(50px, 6vw, 85px);
+height:clamp(50px, 6vw, 85px);
+}
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
