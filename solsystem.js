@@ -77,7 +77,8 @@ planets.forEach((planet, index) => {
 
 // Back-knapp funktion
 const backBtn = document.getElementById("backBtn");
-if(backBtn){
+if (backBtn) {
+  // Klick-event
   backBtn.addEventListener("click", () => {
     document.body.classList.add("fade-out"); // fade-out innan navigering
     setTimeout(() => {
@@ -85,11 +86,21 @@ if(backBtn){
     }, 800);
   });
 
-  // Tangentbordsstöd för back-knappen
+  // Tangentbordstöd (Enter eller mellanslag)
   backBtn.addEventListener("keydown", (e) => {
-    if(e.key === "Enter" || e.key === " "){
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       backBtn.click();
     }
   });
+}
+
+// ESC stänger popup (om popup finns)
+const popup = document.querySelector('.popup');
+if (popup) {
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".popup").forEach(p => p.style.display = "none");
+  }
+});
 }

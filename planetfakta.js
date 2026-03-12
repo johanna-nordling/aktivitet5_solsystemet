@@ -100,11 +100,6 @@ container.className = "sub-btns-container";
   subBtn.addEventListener("blur", () => popup.style.display = "none");
 
   subBtn.appendChild(popup);
-
-  // Visa popup på hover
-  subBtn.addEventListener("mouseenter", () => popup.style.display = "block");
-  subBtn.addEventListener("mouseleave", () => popup.style.display = "none");
-
   container.appendChild(subBtn);
 });
 
@@ -143,4 +138,11 @@ if(onPlanetBtn){
       window.location.href = `onplanet.html?planet=${planetName}`;
     },800);
   });
+
+  // --- ESCAPE GLOBAL ---
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape"){
+    document.querySelectorAll(".popup").forEach(p => p.style.display = "none");
+  }
+});
 }

@@ -52,7 +52,21 @@ if(speechBtn){
       speechPopup.classList.toggle("show-popup");
     });
 
+    // Fokus = tangentbord
+    speechBtn.addEventListener("focus", () => {
+      speechPopup.style.display = "block";
+    });
+    speechBtn.addEventListener("blur", () => {
+      speechPopup.style.display = "none";
+    });
   }
+
+  // ESCAPE
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape"){
+      speechPopup.style.display = "none";
+    }
+  });
 }
 
 // Back-knapp
