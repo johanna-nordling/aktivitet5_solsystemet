@@ -25,7 +25,7 @@ const planetFacts = {
   "Neptunus": "På Neptunus är det extremt kallt och mörkt, en stormig gasvärld. Isvindarna är våldsamma i ett virvel omkring en av väte, helium och metan. Det finns flera molnlager där extrema åskstormar pågår. Solen är mycket svag här då Neptunus är solsystemets yttersta planet."
 };
 
-// Sätt bakgrund för planeten
+// Bakgrund för planeten
 if (planetBackgrounds[planet]) {
   const bg = planetBackgrounds[planet];
   document.body.style.backgroundImage = `url(${bg.img})`;
@@ -34,7 +34,7 @@ if (planetBackgrounds[planet]) {
   document.body.style.backgroundRepeat = "no-repeat";
 }
 
-// Sätt fakta i popup
+// Fakta i popup
 const speechPopup = document.querySelector('.speech-popup');
 if (planetFacts[planet] && speechPopup) {
   speechPopup.textContent = planetFacts[planet];
@@ -61,7 +61,7 @@ if(speechBtn){
     });
   }
 
-  // ESCAPE
+  // KEYDOWN / ESCAPE
   document.addEventListener("keydown", (e) => {
     if(e.key === "Escape"){
       speechPopup.style.display = "none";

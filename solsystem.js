@@ -78,6 +78,7 @@ planets.forEach((planet, index) => {
 // Back-knapp funktion
 const backBtn = document.getElementById("backBtn");
 if (backBtn) {
+  
   // Klick-event
   backBtn.addEventListener("click", () => {
     document.body.classList.add("fade-out"); // fade-out innan navigering

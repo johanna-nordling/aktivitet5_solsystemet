@@ -37,7 +37,7 @@ padding:10px;
 z-index:1000;
 }
 
-/* rubriker */
+/* Rubriker */
 
 .planet-title{
 font-family:'Audiowide';
@@ -111,9 +111,8 @@ transition:transform 10s, opacity .8s;
   background-repeat: no-repeat;
 }
 
-/* gör sidan längre */
 .solar-page{
-  min-height:95vh; /* gör sidan längre än skärmen */
+  min-height:95vh;
 }
 
 /* RUBRIK-BOX */
@@ -122,7 +121,7 @@ position:absolute;
 top:120px;
 right:0;
 font-family:'Audiowide', sans-serif;
-font-size:8vh; /*70px*/
+font-size:8vh;
 color:rgb(232, 232, 232);
 padding:20px 40px;
 background:rgba(179, 179, 179, 0.3);
@@ -135,9 +134,8 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:2rem;
-margin-top:65vh;/*530px*/
+margin-top:65vh;
 margin-left:10%;
-/*margin-left:190px;*/
 flex-wrap:wrap;
 }
 
@@ -190,7 +188,7 @@ opacity:0;
 transition:transform 5s, opacity .8s;
 }
 
-/* Pil-knapp bredvid planeten tar en till onplanet-sidan */
+/* Pil-knapp bredvid planeten / Tar en till Onplanet-sidan */
 .back-btn {
   position: absolute;
   top: 26%;
@@ -223,7 +221,7 @@ transition:transform 5s, opacity .8s;
   background: rgba(180,180,180,0.4);
 }
 
-/* Tooltip för back-knappen */
+/* Tooltip / Back-knappen */
 .back-tooltip {
   position: absolute;
   left: -350%; /* flytta tooltip till vänster om knappen */
@@ -253,14 +251,14 @@ body.swipe-right {
   animation: swipeRight 0.8s forwards;
 }
 
-/* SOLSYSTEM - olika storlekar planeter */
+/* SOLSYSTEM / Storlekar planeter */
 .merkur{
 width:clamp(10px, 1.6vw, 19px);
 height:clamp(10px, 1.6vw, 19px);
 }
 
 .merkur:hover{
-transform:scale(2.5); /* större än de andra */
+transform:scale(2.5);
 box-shadow:0 0 30px white;
 }
 
@@ -280,7 +278,7 @@ height:clamp(12px, 2vw, 25px);
 }
 
 .mars:hover{
-transform:scale(2); /* större än de andra */
+transform:scale(2);
 box-shadow:0 0 30px white;
 }
 
@@ -290,7 +288,7 @@ height:20%;/*clamp(150px, 25vw, 350px);*/
 }
 
 .jupiter:hover{
-transform:scale(1.1); /* större än de andra */
+transform:scale(1.1);
 box-shadow:0 0 30px white;
 }
 
@@ -300,7 +298,7 @@ height:clamp(140px, 25vw, 320px);
 }
 
 .saturnus:hover{
-transform:scale(1.1); /* större än de andra */
+transform:scale(1.1);
 box-shadow:0 0 30px white;
 }
 
@@ -340,15 +338,15 @@ background-size:cover;
 border-radius:50%;
 }
 
-/* Ändra storlek på Saturnus på planetfakta-sidan */
+/* Ändra storlek på Saturnus / Planetfakta-sidan */
 #planetTrack li[data-name="Saturnus"] {
-  width: 120vh;   /* ny bredd */
-  height: 120vh;  /* ny höjd */
+  width: 120vh;
+  height: 120vh;
 }
 
 /* Flytta knappen under Saturnus närmare planeten */
 #planetTrack li[data-name="Saturnus"] .planet-position-btn {
-  bottom: 10vh;  /* ändra från t.ex. -150px till -80px för att komma närmare */
+  bottom: 10vh;
 }
 
 .facts-title{
@@ -391,7 +389,7 @@ color:rgba(255,255,255,0.7);
   color: black;
 }
 
-/* Container för subknappar */
+/* Container / Subknappar */
 .sub-btns-container {
   position: absolute;
   top: 50%;
@@ -424,7 +422,7 @@ color:rgba(255,255,255,0.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover-effekt: subknappen poppar fram */
+/* Hover-effekt / Subknappen visas */
 .sub-btn:hover {
   transform: scale(1.2);
   z-index: 150;
@@ -447,8 +445,8 @@ color:rgba(255,255,255,0.7);
   border-radius: 6px;
   white-space: normal;
   word-break: break-word;
-  max-width: 20rem;/*340px;*/
-  min-width: 10rem;/*150px;*/
+  max-width: 20rem;
+  min-width: 10rem;
   line-height: 1.3em;
   z-index: 200;
   text-align: center;
@@ -493,10 +491,10 @@ color:rgba(255,255,255,0.7);
 .onplanet-btn{
   top:103vh;
   left:auto;
-  right:13%; /* placerar den till höger om planeten */
+  right:13%; /* placeras till höger om planeten */
 }
 
-/* Tooltip "Se hur det kan se ut på planeten" över pilen */
+/* Tooltip "Se hur det kan..." över pilen */
 .onplanet-tooltip{
   position:absolute;
   right:-170%;
@@ -610,7 +608,7 @@ display:block;
   display: block;
 }
 
-/* Placering för onplanet-sidan */
+/* Placering / Onplanet-sidan */
 body.onplanet-page .back-btn {
   top: 72.5%;        /* justera vertikalt */
   left: 46%;      /* justera horisontellt */
@@ -643,7 +641,7 @@ body.onplanet-page .back-btn:hover .back-tooltip {
   opacity: 1;
 }
 
-/* Back-knappen på onplanet-sidan */
+/* Back-knappen / Onplanet-sidan */
 body.onplanet-page .back-btn {
     color: #000000; /* pilens färg på onplanet-sidan */
     background: rgba(255, 255, 255, 0.5); /* knappens bakgrund */
@@ -747,13 +745,13 @@ width:180px;
 height:180px;
 }
 
-/* Vänsterpil tillbaka-knapp */
+/* Vänsterpil / Tillbaka-knapp */
 .back-btn {
   top: 22%;
   left: 35%;
 }
 
-/* Tooltip för back-knappen */
+/* Tooltip / Back-knappen */
 .back-tooltip {
   left: -355%; /* flytta tooltip till vänster om knappen */
   top: 40%;
@@ -802,7 +800,7 @@ height:700px;
   font-size: 18px;
 }
 
-/* TILLBAKA-KNAPP på ONPLANET-sidan */
+/* TILLBAKA-KNAPP / ONPLANET-sidan */
 body.onplanet-page .back-btn {
   top: 63.5%;        /* justera vertikalt */
 }
@@ -847,7 +845,7 @@ left:50%;
 /* SOLSYSTEM-SIDA */
 /* -------------- */
 .solar-page{
-min-height:65vh; /* gör sidan längre än skärmen */
+min-height:65vh;
 }
 
 /* -------------------- */
@@ -887,7 +885,7 @@ height:60px;
 
 /* Till startsidan knapp */
 .back-btn{
-left:5px; /*20*/
+left:5px;
 top:15%;
 }
 
@@ -999,7 +997,7 @@ height:330px;
 
 /* Flytta knappen under Saturnus närmare planeten */
 #planetTrack li[data-name="Saturnus"] .planet-position-btn {
-  bottom: -50px;  /* ändra från t.ex. -150px till -80px för att komma närmare */
+  bottom: -50px;
 }
 
 /* Introtext när sidan öppnas */

@@ -1,7 +1,7 @@
 const track = document.getElementById("planetTrack");
 const planets = Array.from(track.children);
 
-// Sätt bakgrundsbilder
+// Bakgrundsbilder
 planets.forEach(planet => {
   planet.style.backgroundImage = `url(${planet.dataset.img})`;
 });
@@ -139,7 +139,7 @@ if(onPlanetBtn){
     },800);
   });
 
-  // --- ESCAPE GLOBAL ---
+  // --- KEYDOWN / ESCAPE ---
 document.addEventListener("keydown", (e) => {
   if(e.key === "Escape"){
     document.querySelectorAll(".popup").forEach(p => p.style.display = "none");
