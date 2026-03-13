@@ -47,7 +47,7 @@ transform:translate(-50%,-50%);
 font-family:'Audiowide';
 font-size:4vh;
 color:rgb(0, 0, 0);
-text-shadow:0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
+text-shadow:0 0 10px rgb(255, 255, 255);
 opacity:0;
 pointer-events:none;
 transition:opacity .5s;
