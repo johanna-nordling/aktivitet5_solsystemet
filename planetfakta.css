@@ -60,7 +60,7 @@ color:rgba(255,255,255,0.7);
 }
 
 .planet-main-btn:hover {
-  transform: translate(-50%, -50%) scale(1.6); /* förstoras */
+  transform: translate(-50%, -50%) scale(1.6);
 }
 
 .planet-main-btn:active {
@@ -192,8 +192,8 @@ color:rgba(255,255,255,0.7);
 /* Tooltip "Se hur det kan..." över pilen */
 .onplanet-tooltip{
   position:absolute;
-  left:-4vw;/*-7.5vh*/
-  top:-2vw;/*-5vh*/
+  left:-4vw;
+  top:-2vw;
   transform:translateY(-50%);
   font-family:'Audiowide', sans-serif;
   white-space: normal;
@@ -220,7 +220,7 @@ color:rgba(255,255,255,0.7);
 .back-btn {
   position: absolute;
   top: 103vh;
-  right: 24vh;/*430px*/
+  right: 24vh;
   transform: translateY(-50%);
   font-size: 2.5rem;
   background: rgba(197, 197, 197, 0.2);

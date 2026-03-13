@@ -124,8 +124,8 @@ box-shadow:0 0 30px white;
 }
 
 .jupiter{
-width:20%;/*clamp(150px, 25vw, 350px);*/
-height:20%;/*clamp(150px, 25vw, 350px);*/
+width:20%;
+height:20%;
 }
 
 .jupiter:hover{

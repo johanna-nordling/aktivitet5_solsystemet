@@ -118,7 +118,7 @@ height:700px;
 
 /* TILLBAKA-KNAPP / ONPLANET-sidan */
 body.onplanet-page .back-btn {
-  top: 63.5%;        /* justera vertikalt */
+  top: 63.5%;
 }
 
 }
@@ -306,8 +306,8 @@ height:330px;
 
 /* Ändra storlek på Saturnus på planetfakta-sidan */
 #planetTrack li[data-name="Saturnus"] {
-  width: 390px;   /* ny bredd */
-  height: 390px;  /* ny höjd */
+  width: 390px;
+  height: 390px;
   top:45%;
 }
 
@@ -373,8 +373,8 @@ font-size:0.7rem;
 
 /* Tooltip "Se hur det kan..." över pilen */
 .onplanet-tooltip{
-  left:-17vw;/*-7.5vh*/
-  top:-8vw;/*-5vh*/
+  left:-17vw;
+  top:-8vw;
   font-size:13px;
   max-width: 340px;
   min-width: 150px;

@@ -12,7 +12,7 @@
 .speech-container {
   position: absolute;
   top: 70.2%;
-  right: 46%; /* justera efter planetens position */
+  right: 46%;
 }
 
 /* Glas-pratbubbla */
@@ -86,8 +86,8 @@ display:block;
 
 /* Placering / Onplanet-sidan */
 body.onplanet-page .back-btn {
-  top: 72.5%;        /* justera vertikalt */
-  left: 46%;      /* justera horisontellt */
+  top: 72.5%;      
+  left: 46%;      
   font-size: 2rem;
   width: 40px;
   height: 40px;
@@ -133,7 +133,7 @@ body.onplanet-page .back-btn:hover {
 .back-btn {
   position: absolute;
   top: 26%;
-  left: 25%;/*430px*/
+  left: 25%;
   transform: translateY(-50%);
   font-size: 2.5rem;
   background: rgba(197, 197, 197, 0.2);
@@ -176,7 +176,7 @@ body.onplanet-page .back-btn:hover {
   border-radius: 5px;
   font-size: 0.9rem;
   white-space: nowrap;
-  opacity: 0;       /* dold som standard */
+  opacity: 0;     
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 400;
